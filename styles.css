@@ -1,13 +1,18 @@
-/* Global Styles */
-body, html {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
   background-color: #000;
   color: #fff;
 }
 
+/* HERO SECTION */
 .hero-container {
   position: relative;
   height: 100vh;
@@ -33,29 +38,57 @@ body, html {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 3px;
-  margin: 0;
+  color: #fff;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin: 10px 0 30px;
+  font-size: 1.4rem;
+  margin: 15px 0 35px;
   font-weight: 300;
   color: #ccc;
 }
 
+/* BUTTON */
 .enter-button {
-  padding: 12px 30px;
+  padding: 12px 32px;
   font-size: 1rem;
   text-decoration: none;
-  color: #000;
+  color: #000 !important;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .enter-button:hover {
   background-color: gold;
-  color: #000;
+  color: #000 !important;
+}
+
+.enter-button:visited {
+  color: #000 !important;
+}
+
+/* COLLECTIONS PAGE TEMP STYLES */
+.collection-wrapper {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.collection-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.collection-wrapper p {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
 }
