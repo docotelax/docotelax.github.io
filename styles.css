@@ -1,94 +1,61 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-/* HERO SECTION */
-.hero-container {
-  position: relative;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-content {
-  text-align: center;
-  z-index: 2;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  letter-spacing: 3px;
-  color: #fff;
-}
-
-.hero-content p {
-  font-size: 1.4rem;
-  margin: 15px 0 35px;
-  font-weight: 300;
-  color: #ccc;
-}
-
-/* BUTTON */
-.enter-button {
-  padding: 12px 32px;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #000 !important;
-  background-color: #fff;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.enter-button:hover {
-  background-color: gold;
-  color: #000 !important;
-}
-
-.enter-button:visited {
-  color: #000 !important;
-}
-
-/* COLLECTIONS PAGE TEMP STYLES */
-.collection-wrapper {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.collection-wrapper h1 {
+.collections-title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
 }
 
-.collection-wrapper p {
-  font-size: 1.1rem;
-  color: #aaa;
+.collections-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
 }
 
-a {
-  color: #fff;
-  text-decoration: underline;
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.collection-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 30px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.collection-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.collection-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.back-link {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-link a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link a:hover {
+  color: white;
 }
