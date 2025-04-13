@@ -2,15 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docotela X – Collections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collections | Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .collections-container {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    .collection-section {
+      margin-bottom: 60px;
+    }
+
+    .collection-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 8px;
+    }
+
+    .collection-description {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .pieces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .piece {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .piece:hover {
+      transform: scale(1.03);
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .available {
+      color: #33ff99;
+    }
+
+    .sold {
+      color: #ff5555;
+    }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      color: #aaa;
+      text-decoration: underline;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div style="text-align:center; padding: 100px 20px;">
-    <h1>Welcome to the Gallery</h1>
-    <p>Our exclusive collections will appear here soon.</p>
-    <a href="index.html" style="color:white; text-decoration:underline;">Go back</a>
+  <div class="collections-container">
+    <h1>Limited Collections</h1>
+
+    <div class="collection-section">
+      <div class="collection-title">The Feeling of Freedom</div>
+      <div class="collection-description">
+        A reflection of liberation and personal growth. Each of the 10 pieces was handcrafted by a unique young artist, representing their own journey toward freedom.
+      </div>
+
+      <div class="pieces-grid">
+        <div class="piece"><strong>Piece 1/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 2/10</strong><div class="status sold">Sold</div></div>
+        <div class="piece"><strong>Piece 3/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 4/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 5/10</strong><div class="status sold">Sold</div></div>
+        <div class="piece"><strong>Piece 6/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 7/10</strong><div class="status sold">Sold</div></div>
+        <div class="piece"><strong>Piece 8/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 9/10</strong><div class="status available">Available</div></div>
+        <div class="piece"><strong>Piece 10/10</strong><div class="status sold">Sold</div></div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">Back to Home</a>
   </div>
 </body>
 </html>
