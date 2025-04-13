@@ -3,8 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docotela X</title>
+  <title>Welcome to Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #aaa;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-height: 600px) {
+      footer {
+        position: static;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="hero-container">
@@ -16,5 +39,17 @@
       </div>
     </div>
   </div>
+
+  <!-- Fixed Footer for Contact & Instagram -->
+  <footer>
+    <p>
+      For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
 </body>
 </html>
