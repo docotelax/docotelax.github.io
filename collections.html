@@ -1,34 +1,55 @@
-<div class="collection-section">
-      <div class="collection-title">The 8deity</div>
-      <div class="collection-description">
-        A powerful tribute to the divine creative spirit that lives within. Each piece in The 8deity collection reflects themes of rebirth, chaos, and harmony — designed to channel your inner godlike energy.
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #aaa;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
 
-     <div class="collection-section">
-  <div class="collection-title">Collections</div>
-  <div class="collection-description">Select a collection to explore the story and pieces.</div>
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
 
-  <div class="collections-menu">
-    <a href="freedom.html" class="collection-link">The Feeling of Freedom</a>
-    <a href="8deity.html" class="collection-link">The 8deity</a>
-    <!-- Add more links here as new collections are added -->
-  </div>
-</div>
-
-    <div class="collection-section">
-      <div class="collection-title">The 8deity</div>
-      <div class="collection-description">
-        A powerful tribute to the divine creative spirit that lives within. Each piece in The 8deity collection reflects themes of rebirth, chaos, and harmony — designed to channel your inner godlike energy.
-      </div>
-
-      <div class="pieces-grid">
-        <div class="piece"><strong>Piece 1/8</strong><div class="status available">Available</div></div>
-        <div class="piece"><strong>Piece 2/8</strong><div class="status sold">Sold</div></div>
-        <div class="piece"><strong>Piece 3/8</strong><div class="status available">Available</div></div>
-        <div class="piece"><strong>Piece 4/8</strong><div class="status available">Available</div></div>
-        <div class="piece"><strong>Piece 5/8</strong><div class="status sold">Sold</div></div>
-        <div class="piece"><strong>Piece 6/8</strong><div class="status available">Available</div></div>
-        <div class="piece"><strong>Piece 7/8</strong><div class="status available">Available</div></div>
-        <div class="piece"><strong>Piece 8/8</strong><div class="status available">Available</div></div>
+    @media (max-height: 600px) {
+      footer {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-container">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Docotela X</h1>
+        <p>Wear the Feeling of Freedom</p>
+        <a href="collections.html" class="enter-button">Enter the Gallery</a>
       </div>
     </div>
+  </div>
+
+  <!-- Fixed Footer for Contact & Instagram -->
+  <footer>
+    <p>
+      For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+</body>
+</html>
