@@ -2,24 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title<Wear The Feeling Of Freedom/title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Docotela X
+  Your Story Your Style Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #aaa;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-height: 600px) {
+      footer {
+        position: static;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Cover Section -->
-  <section class="cover">
-    <div class="cover-content">
-      <!-- LOGO -->
-      <img src="assets/image0.png" alt="Docotela X Logo" class="logo" />
-
-      <!-- Tagline -->
-      <h1>Docotela X</h1>
-      <p>Your Story Your Style Docotela X</p>
-
-      <!-- Enter Button -->
-      <a href="collections.html" class="enter-button">Enter the Gallery</a>
+  <div class="hero-container">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Docotela X</h1>
+        <p>The Art Of The Unknown</p>
+        <a href="collections.html" class="enter-button">Enter the Gallery</a>
+      </div>
     </div>
-  </section>
-</body>
+  </div>
+
+  <!-- Fixed Footer for Contact & Instagram -->
+  <footer>
+    <p>
+      For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+  </body>
 </html>
