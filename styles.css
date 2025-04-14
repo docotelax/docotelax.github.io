@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,133 +6,86 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Logo Styling */
-.cover-logo {
-  width: 300px;
-  max-width: 90%;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
-}
-
-/* Hero Section (Homepage Cover) */
-.hero {
+/* Cover Section */
+.cover {
   height: 100vh;
-  background-color: #000;
-  background-position: center;
-  background-size: cover;
+  background: url('assets/cover.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 40px;
+  position: relative;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  color: #fff;
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
   letter-spacing: 2px;
-  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #ccc;
   margin-bottom: 30px;
 }
 
-/* Button */
+/* Enter button */
 .enter-button {
-  border: 1px solid #fff;
   padding: 12px 30px;
-  color: #fff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
   font-size: 1rem;
-  letter-spacing: 1px;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .enter-button:hover {
-  background: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Collections Page */
-.collections {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.collection {
-  margin-bottom: 60px;
-}
-
-.collection h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-}
-
-.collection p {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: #aaa;
-}
-
-/* Gallery Grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.gallery-item {
-  border: 1px solid #333;
-  padding: 20px;
-  background: #111;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.02);
-}
-
-.gallery-item img {
-  width: 100%;
-  border: 1px solid #444;
-}
-
-.gallery-item h4 {
-  margin-top: 15px;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #fff;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-/* Responsive Typography */
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
 
-  .collection h2 {
-    font-size: 2.5rem;
+  p {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 90px;
   }
 }
