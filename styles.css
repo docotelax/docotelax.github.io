@@ -89,3 +89,56 @@ p {
     width: 90px;
   }
 }
+collection-page {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: white;
+  text-align: center;
+}
+
+.collection-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.collection-intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.pieces-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.piece {
+  background-color: #1a1a1a;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.piece a {
+  color: #d1a954;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.piece.sold {
+  color: #666;
+  justify-content: center;
+}
+
+.back-link {
+  display: block;
+  margin-top: 50px;
+  color: #d1a954;
+  text-decoration: underline;
+}
