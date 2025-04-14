@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,47 +8,131 @@
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-.cover {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Logo Styling */
+.cover-logo {
+  width: 300px;
+  max-width: 90%;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+/* Hero Section (Homepage Cover) */
+.hero {
+  height: 100vh;
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
 }
 
-.logo {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.tagline {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-.enter-button {
-  padding: 14px 30px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  text-decoration: none;
-  font-size: 14px;
+.hero h1 {
+  font-size: 2rem;
+  color: #fff;
   letter-spacing: 2px;
-  transition: all 0.3s ease-in-out;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.enter-button {
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
 }
 
 .enter-button:hover {
-  background-color: white;
-  color: black;
+  background: #fff;
+  color: #000;
+}
+
+/* Collections Page */
+.collections {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.collection {
+  margin-bottom: 60px;
+}
+
+.collection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.collection p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  border: 1px solid #333;
+  padding: 20px;
+  background: #111;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  border: 1px solid #444;
+}
+
+.gallery-item h4 {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .collection h2 {
+    font-size: 2.5rem;
+  }
 }
