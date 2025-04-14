@@ -6,6 +6,7 @@
   <title>Welcome to Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    /* Footer Styles */
     footer {
       position: fixed;
       bottom: 0;
@@ -28,24 +29,34 @@
       }
     }
 
-    .logo {
-      max-width: 180px;
+    /* Centered Logo */
+    .logo-container {
       position: absolute;
       top: 20px;
-      left: 20px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 100;
+      text-align: center;
+    }
+
+    .logo-container img {
+      max-width: 200px;
+      height: auto;
     }
   </style>
 </head>
 <body>
-  <!-- LOGO at the top-left -->
-  <img src="assets/image0.png" alt="Docotela X Logo" class="logo" />
+  <!-- Centered Logo -->
+  <div class="logo-container">
+    <img src="assets/image0.png" alt="Docotela X Logo" />
+  </div>
 
+  <!-- Main Hero Section -->
   <div class="hero-container">
     <div class="overlay">
       <div class="hero-content">
         <h1>Docotela X</h1>
-        <p> Your Story Your Style Docotela X</p>
+        <p>Your Story Your Style Docotea X</p>
         <a href="collections.html" class="enter-button">Enter the Gallery</a>
       </div>
     </div>
