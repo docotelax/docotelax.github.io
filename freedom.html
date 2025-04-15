@@ -2,33 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Feeling of Freedom – Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Feeling of Freedom - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .freedom-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #0a0a0a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .freedom-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .freedom-container p.subtitle {
+      font-size: 1.2rem;
+      color: #aaa;
+      max-width: 600px;
+      margin-bottom: 50px;
+    }
+
+    .coming-soon {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #a64aff;
+      margin: 40px 0;
+    }
+
+    .back-link {
+      margin-top: 60px;
+      font-size: 1rem;
+      color: white;
+      text-decoration: underline;
+    }
+
+    .back-link:hover {
+      color: #a64aff;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="collection-title">The Feeling of Freedom</h1>
-    <p class="collection-description">
-      This collection was born from a journey—of finding freedom through failure, through art, and through self-belief. Each piece represents the feeling of escape, lightness, and breaking barriers.
+  <div class="freedom-container">
+    <h1>The Feeling of Freedom</h1>
+    <p class="subtitle">
+      A collection born from rebellion and the pursuit of self. These pieces reflect the art of becoming — when fashion is no longer fabric, but feeling.
     </p>
 
-    <div class="pieces-grid">
-      <div class="piece"><strong>Piece 1/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 2/10</strong><div class="status sold">Sold</div></div>
-      <div class="piece"><strong>Piece 3/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 4/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 5/10</strong><div class="status sold">Sold</div></div>
-      <div class="piece"><strong>Piece 6/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 7/10</strong><div class="status sold">Sold</div></div>
-      <div class="piece"><strong>Piece 8/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 9/10</strong><div class="status available">Available</div></div>
-      <div class="piece"><strong>Piece 10/10</strong><div class="status available">Available</div></div>
+    <div class="coming-soon">
+      Pieces Coming Soon...
     </div>
 
-    <div class="back-link">
-      <a href="collections.html">← Back to Collections</a>
-    </div>
+    <p style="color:#777;">Crafted by unique artists. Each piece will be one of one.</p>
+
+    <a href="collections.html" class="back-link">← Back to Collections</a>
   </div>
 </body>
 </html>
