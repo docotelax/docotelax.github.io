@@ -2,61 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-left">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
-      <div class="nav-right">
-        <button class="menu-button" onclick="toggleMenu()">Menu</button>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="index.html">Home</a>
-          <a href="collections.html">Collections</a>
-          <a href="art.html">Art Gallery</a>
-          <a href="members.html">Members Only</a>
-        </div>
-      </div>
+
+  <header class="top-nav">
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="dropdown-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
 
-  <!-- About Section -->
-  <div class="page-content">
+  <section class="page-content">
     <h1>About Docotela X</h1>
-    <p class="about-text">
-      Docotela X was born from a journey — a personal story of rising beyond doubts and embracing the feeling of freedom.
-      Each piece is not just clothing; it’s a statement of identity, a wearable expression of soul, struggle, and art.
-      <br><br>
-      Our collections are exclusive, handmade, and inspired by stories that matter. With every piece, you carry the energy
-      of a dream realized, a road traveled, and freedom found in creativity.
-      <br><br>
-      Welcome to the experience. Welcome to Docotela X.
-    </p>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>For inquiries or collaborations:
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p style="margin-top: 6px;">
-      Follow us on Instagram:
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
-  </footer>
+    <p>Docotela X is more than fashion — it's the embodiment of freedom, art, and self-expression. Every collection is a chapter in a personal story, crafted for those who dare to be original.</p>
+  </section>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
+      document.getElementById("menu").classList.toggle("show-menu");
+}
   </script>
 </body>
 </html>
