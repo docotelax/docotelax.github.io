@@ -1,70 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Docotela X</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      <div id="navbar-placeholder"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      padding: 80px 20px;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      color: #ccc;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .highlight {
-      color: #fff;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="index.html">Home</a>
+          <a href="collections.html">Collections</a>
+          <a href="art.html">Art Gallery</a>
+          <a href="members.html">Members Only</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  <h1>The Story of Docotela X</h1>
+  <!-- About Section -->
+  <div class="page-content">
+    <h1>About Docotela X</h1>
+    <p class="about-text">
+      Docotela X was born from a journey — a personal story of rising beyond doubts and embracing the feeling of freedom.
+      Each piece is not just clothing; it’s a statement of identity, a wearable expression of soul, struggle, and art.
+      <br><br>
+      Our collections are exclusive, handmade, and inspired by stories that matter. With every piece, you carry the energy
+      of a dream realized, a road traveled, and freedom found in creativity.
+      <br><br>
+      Welcome to the experience. Welcome to Docotela X.
+    </p>
+  </div>
 
-  <p>
-    <span class="highlight">Docotela X</span> is more than just a clothing brand — it's an expression of freedom, passion, and artistic truth. Born from a journey of self-discovery, persistence, and creative rebellion, the brand was created to remind the world that style can be soulful and storytelling can be wearable.
-  </p>
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
 
-  <p>
-    Each collection is carefully curated to reflect a philosophy — from feeling lost in the pursuit of dreams to discovering peace in emptiness. <span class="highlight">Docotela X</span> is where fashion meets art, where every stitch tells a story, and where every limited piece carries the essence of its creator.
-  </p>
-
-  <p>
-    This is a space for the dreamers, the fighters, and the free spirits. You're not just wearing clothing — you're wearing a journey.
-  </p>
-
-  <p style="text-align: center; margin-top: 40px;"><em>Your story. Your style. Docotela X.</em></p>
-
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
