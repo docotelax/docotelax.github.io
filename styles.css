@@ -141,3 +141,11 @@ collection-page {
   color: #d1a954;
   text-decoration: underline;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #aaa;
+}
