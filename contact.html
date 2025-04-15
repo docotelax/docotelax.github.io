@@ -2,74 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      <div id="navbar-placeholder"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: gold;
-    }
-
-    .social {
-      margin-top: 30px;
-      font-size: 1.2rem;
-    }
-  </style>
 </head>
 <body>
 
-  <h1>Get in Touch</h1>
+  <header class="top-nav">
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="dropdown-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
 
-  <p>
-    For collaborations, custom pieces, press inquiries or general questions,
-    please reach out to us.
-  </p>
+  <section class="page-content">
+    <h1>Contact Us</h1>
+    <p>Email: <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a></p>
+  </section>
 
-  <p>Email:
-    <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-  </p>
-
-  <div class="social">
-    Follow us on Instagram: <br />
-    <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-  </div>
-
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show-menu");
+    }
+  </script>
 </body>
 </html>
+
