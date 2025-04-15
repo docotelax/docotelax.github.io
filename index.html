@@ -2,94 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-    }
-
-    .logo-container {
-      margin-top: 60px;
-    }
-
-    .logo-container img {
-      width: 300px;
-      max-width: 80%;
-    }
-
-    .hero-text {
-      margin-top: 30px;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .enter-button {
-      padding: 14px 30px;
-      font-size: 1rem;
-      background-color: transparent;
-      border: 2px solid white;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .enter-button:hover {
-      background-color: white;
-      color: black;
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      color: #aaa;
-      text-align: center;
-      padding: 10px 20px;
-      font-size: 0.95rem;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    @media (max-height: 600px) {
-      footer {
-        position: static;
-      }
-    }
-  </style>
 </head>
 <body>
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">Docotela X</a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="collections.html">Collections</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="members.html">Member Only</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <input type="text" placeholder="Search..." class="search-bar" />
+    </div>
+  </nav>
 
-  <!-- Logo -->
-  <div class="logo-container">
-    <img src="assets/image0.png" alt="Docotela X Logo" />
-  </div>
-
-  <!-- Text and Button -->
-  <div class="hero-text">
-    <h1>Docotela X</h1>
-    <p>Your Story. Your Style. Docotela X</p>
-    <a href="collections.html" class="enter-button">Enter the Gallery</a>
+  <!-- Cover Page -->
+  <div class="hero-container">
+    <div class="overlay">
+      <div class="hero-content">
+        <img src="assets/image0.png" alt="Docotela X Logo" class="cover-logo" />
+        <h1>Docotela X</h1>
+        <p>Your Story. Your Style. Docotela X</p>
+        <a href="collections.html" class="enter-button">Enter the Gallery</a>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -103,6 +48,5 @@
       <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
     </p>
   </footer>
-
 </body>
 </html>
