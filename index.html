@@ -8,23 +8,21 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav class="navbar">
-    <div class="nav-left">
+    <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="nav-right">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-    <div id="dropdown-menu" class="dropdown-menu">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="mobile-menu" id="mobileMenu">
       <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
       <a href="collections.html">Collections</a>
+      <a href="gallery.html">Art Gallery</a>
       <a href="members.html">Members Only</a>
-      <a href="art.html">Art Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -33,7 +31,7 @@
     <img src="assets/image0.png" alt="Docotela X Logo" />
   </div>
 
-  <!-- Hero Text -->
+  <!-- Main Text -->
   <div class="hero-text">
     <h1>Docotela X</h1>
     <p>Your Story. Your Style. Docotela X</p>
@@ -42,29 +40,18 @@
 
   <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations:
+    <p>
+      For inquiries or collaborations:
       <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
     </p>
-    <p>Follow us on Instagram:
+    <p>
+      Follow us on Instagram:
       <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
     </p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdown-menu");
-      menu.classList.toggle("show");
-    }
-
-    // Close dropdown when clicked outside
-    window.onclick = function(e) {
-      if (!e.target.matches('.menu-toggle')) {
-        const menu = document.getElementById("dropdown-menu");
-        if (menu.classList.contains('show')) {
-          menu.classList.remove('show');
-        }
-      }
+      document.getElementById("mobileMenu").classList.toggle("show");
     }
   </script>
-</body>
-</html>
