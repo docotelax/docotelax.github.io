@@ -173,3 +173,80 @@ navbar {
     display: none !important;
   }
 }
+/* Navigation Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px 30px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 1rem;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  color: gold;
+}
+
+/* Make sure links NEVER show blue or purple */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: gold;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .menu-button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .dropdown-menu {
+    right: 20px;
+  }
+}
