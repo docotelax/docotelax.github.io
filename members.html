@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Docotela X | Members Area</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      <div id="navbar-placeholder"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #ccc;
-      font-size: 1.1rem;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Members Only</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to the Exclusive Members Area</h1>
-  <p>This space will showcase private collections, behind-the-scenes artwork, and more. Stay tuned.</p>
+
+  <header class="top-nav">
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="dropdown-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="page-content">
+    <h1>Members Only</h1>
+    <p>This content is private. Please enter the password to continue.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button onclick="checkPassword()">Access</button>
+    <p id="accessMessage"></p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show-menu");
+    }
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      const message = document.getElementById("accessMessage");
+      if (password === "memberson1y") {
+        message.innerHTML = "Access granted. Welcome!";
+      } else {
+        message.innerHTML = "Incorrect password.";
+      }
+    }
+  </script>
 </body>
 </html>
