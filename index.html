@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Docotela X</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="collections.html">Collections</a></li>
-        <li><a href="artgallery.html">Art Gallery</a></li>
-        <li><a href="members.html">Member Only</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="dropdown-menu" class="dropdown-menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="art.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
@@ -28,8 +33,8 @@
     <img src="assets/image0.png" alt="Docotela X Logo" />
   </div>
 
-  <!-- Hero Text and Button -->
- <div class="hero-text">
+  <!-- Hero Text -->
+  <div class="hero-text">
     <h1>Docotela X</h1>
     <p>Your Story. Your Style. Docotela X</p>
     <a href="collections.html" class="enter-button">Enter the Gallery</a>
@@ -37,15 +42,29 @@
 
   <!-- Footer -->
   <footer>
-    <p>
-      For inquiries or collaborations:
+    <p>For inquiries or collaborations:
       <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
     </p>
-    <p style="margin-top: 6px;">
-      Follow us on Instagram:
+    <p>Follow us on Instagram:
       <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
     </p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdown-menu");
+      menu.classList.toggle("show");
+    }
+
+    // Close dropdown when clicked outside
+    window.onclick = function(e) {
+      if (!e.target.matches('.menu-toggle')) {
+        const menu = document.getElementById("dropdown-menu");
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
+        }
+      }
+    }
+  </script>
 </body>
 </html>
