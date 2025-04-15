@@ -50,6 +50,20 @@
   </style>
 </head>
 <body>
+  <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
   <div class="freedom-container">
     <h1>The Feeling of Freedom</h1>
     <p class="subtitle">
