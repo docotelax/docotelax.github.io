@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
+      <div id="navbar-placeholder"></div>
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+    });
+
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
