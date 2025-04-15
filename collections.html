@@ -3,64 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docotela X – Collections</title>
+  <title>Docotela X Collections</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background-color: #000;
-      color: white;
-      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #0e0e0e;
+      color: white;
+      font-family: 'Helvetica Neue', sans-serif;
     }
 
     .collections-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 80px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 80px 40px 60px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .collection-card {
-      background-color: #111;
-      border: 1px solid #222;
-      padding: 30px;
+      background-color: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      padding: 30px 20px;
       text-align: center;
-      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .collection-card:hover {
+      background-color: #222;
+      transform: translateY(-5px);
     }
 
     .collection-card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: #fff;
     }
 
-    .collection-card p {
-      font-size: 1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .view-button {
+    .collection-card a {
       display: inline-block;
-      padding: 10px 25px;
-      background-color: transparent;
-      border: 1px solid white;
-      color: white;
+      margin-top: 10px;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #333;
+      border: 1px solid #fff;
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: background 0.3s, color 0.3s;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    .view-button:hover {
-      background-color: white;
-      color: black;
+    .collection-card a:hover {
+      background-color: #555;
     }
 
     footer {
-      text-align: center;
+      margin-top: 60px;
       padding: 20px;
-      color: #aaa;
+      text-align: center;
       font-size: 0.9rem;
+      background-color: #111;
+      color: #aaa;
     }
 
     footer a {
@@ -73,44 +78,37 @@
   <div class="collections-container">
     <div class="collection-card">
       <h2>The Feeling of Freedom</h2>
-      <p>Freedom as wearable art.</p>
-      <a href="freedom.html" class="view-button">View Collection</a>
+      <a href="freedom.html">View Collection</a>
     </div>
-
     <div class="collection-card">
       <h2>4 Perspectives 1 Story</h2>
-      <p>Four minds. One voice.</p>
-      <a href="4perspectives.html" class="view-button">View Collection</a>
+      <a href="4perspectives.html">View Collection</a>
     </div>
-
     <div class="collection-card">
       <h2>The 8deity</h2>
-      <p>8 pieces. Divine expression.</p>
-      <a href="8deity.html" class="view-button">View Collection</a>
+      <a href="8deity.html">View Collection</a>
     </div>
-
     <div class="collection-card">
       <h2>Quiet Space</h2>
-      <p>Silence reimagined through fashion.</p>
-      <a href="quietspace.html" class="view-button">View Collection</a>
+      <a href="quietspace.html">View Collection</a>
     </div>
-
     <div class="collection-card">
       <h2>Lost in the Art of Chasing Freedom</h2>
-      <p>The story of pursuit and escape.</p>
-      <a href="lostfreedom.html" class="view-button">View Collection</a>
+      <a href="lostinart.html">View Collection</a>
     </div>
-
     <div class="collection-card">
       <h2>Found in Emptiness</h2>
-      <p>Where nothing becomes everything.</p>
-      <a href="found.html" class="view-button">View Collection</a>
+      <a href="foundinemptiness.html">View Collection</a>
     </div>
   </div>
 
   <footer>
-    <p>For inquiries: <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a></p>
-    <p>Follow us: <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a></p>
+    <p>For inquiries or collaborations: 
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">Follow us on Instagram: 
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
   </footer>
 </body>
-</html
+</html>
