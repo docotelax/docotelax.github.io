@@ -1,4 +1,14 @@
-/* Navigation Bar Styles */
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,6 +40,8 @@
   list-style: none;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
@@ -41,4 +53,70 @@
 
 .nav-links a:hover {
   color: gold;
+}
+
+/* Logo Container */
+.logo-container {
+  margin-top: 100px;
+}
+
+.logo-container img {
+  width: 300px;
+  max-width: 80%;
+}
+
+/* Hero Section Text */
+.hero-text {
+  margin-top: 30px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Enter Button */
+.enter-button {
+  padding: 14px 30px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #aaa;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-height: 600px) {
+  footer {
+    position: static;
+  }
 }
