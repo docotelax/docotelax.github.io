@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Docotela X</title>
+  <meta charset="UTF-8">
+  <title>About Docotela X</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: #333; color: white; text-align: center; }
-    header { background-color: #222; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.5rem; font-weight: bold; }
-    nav { display: flex; gap: 20px; }
-    nav a { color: white; text-decoration: none; font-size: 1rem; }
-    .menu-toggle { display: none; flex-direction: column; cursor: pointer; }
-    .menu-toggle span { height: 3px; width: 25px; background: white; margin: 4px 0; }
-    main { padding: 50px 20px; }
-    footer { margin-top: 100px; padding: 20px; font-size: 1rem; }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      padding: 80px 20px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: auto;
+    }
 
-    @media (max-width: 768px) {
-      nav { display: none; flex-direction: column; width: 100%; }
-      nav.active { display: flex; }
-      .menu-toggle { display: flex; }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Docotela X</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-    </nav>
-  </header>
+  <h1>The Story of Docotela X</h1>
 
-  <main>
-    <h1>About Docotela X</h1>
-    <p style="margin-top: 20px; font-size: 1.1rem;">
-      Docotela X is more than just a clothing brand. It's the embodiment of freedom, expression, and bold creativity.
-      Every piece is handcrafted with purpose, telling stories of resilience and individuality.
-    </p>
-  </main>
+  <p>
+    <span class="highlight">Docotela X</span> is more than just a clothing brand — it's an expression of freedom, passion, and artistic truth. Born from a journey of self-discovery, persistence, and creative rebellion, the brand was created to remind the world that style can be soulful and storytelling can be wearable.
+  </p>
 
-  <footer>
-    Follow us on @docotela_x | Contact: docotelax@gmail.com
-  </footer>
+  <p>
+    Each collection is carefully curated to reflect a philosophy — from feeling lost in the pursuit of dreams to discovering peace in emptiness. <span class="highlight">Docotela X</span> is where fashion meets art, where every stitch tells a story, and where every limited piece carries the essence of its creator.
+  </p>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav');
-      nav.classList.toggle('active');
-    }
-  </script>
+  <p>
+    This is a space for the dreamers, the fighters, and the free spirits. You're not just wearing clothing — you're wearing a journey.
+  </p>
+
+  <p style="text-align: center; margin-top: 40px;"><em>Your story. Your style. Docotela X.</em></p>
+
 </body>
 </html>
