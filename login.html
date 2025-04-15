@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Members Login - Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    input[type="password"] {
+      padding: 12px;
+      margin-top: 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Members Only Access</h1>
+    <p>Enter the password to view this exclusive section.</p>
+    <input type="password" id="password" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error-message" style="color: red;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      if (password === "memberson1y") {
+        window.location.href = "members.html";
+      } else {
+        document.getElementById("error-message").textContent = "Incorrect password. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
