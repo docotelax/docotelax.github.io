@@ -479,3 +479,29 @@ footer a:hover {
   color: gold;
   text-align: center;
 }
+/* About Page Styling */
+.about-section {
+  padding: 160px 20px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: gold;
+}
+
+.about-intro {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 20px;
+}
