@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Collection - Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="membersonly.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Private Content -->
+  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
+    <h1>Welcome, Member</h1>
+    <p>This is the exclusive members-only area. Enjoy our private collections and behind-the-scenes content.</p>
+    <!-- Add exclusive content here -->
+  </div>
+
+  <footer>
+    <p>For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p>Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
