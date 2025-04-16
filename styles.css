@@ -27,7 +27,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .top-links a {
