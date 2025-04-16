@@ -1,52 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Members Only</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members Only - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-  <header class="top-nav">
-    <div class="nav-center">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="dropdown-menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="members.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </header>
-
-  <section class="page-content">
-    <h1>Members Only</h1>
-    <p>This content is private. Please enter the password to continue.</p>
-    <input type="password" id="passwordInput" placeholder="Enter password" />
-    <button onclick="checkPassword()">Access</button>
-    <p id="accessMessage"></p>
-  </section>
-
   <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("show-menu");
-    }
     function checkPassword() {
-      const password = document.getElementById("passwordInput").value;
-      const message = document.getElementById("accessMessage");
-      if (password === "memberson1y") {
-        message.innerHTML = "Access granted. Welcome!";
-      } else {
-        message.innerHTML = "Incorrect password.";
+      const password = prompt("Enter password to access:");
+      if (password !== "memberson1y") {
+        alert("Incorrect password.");
+        window.location.href = "index.html";
       }
     }
   </script>
-</body>
-</html>
+</head>
+<body onload="checkPassword()">
+  <!-- Navigation -->
+  [Insert the same nav from index.html above]
+
+  <div class="members-section">
+    <h2>Welcome to the Members-Only Section</h2>
+    <p>Exclusive pieces and private access coming soon.</p>
+  </div>
