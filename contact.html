@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Docotela X</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Top Navigation -->
+  <!-- Navigation -->
   <div class="top-nav">
     <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
-  <!-- Side Menu -->
   <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
@@ -27,34 +26,31 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Contact Section -->
-  <div class="main-container">
-    <section class="contact-section">
-      <h1>Contact Us</h1>
-      <p>Email: <a href="mailto:info@docotelax.com">info@docotelax.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
+  <!-- Contact Content -->
+  <div class="contact-container">
+    <h1>Let's Connect</h1>
+    <p>If you want to collaborate or just say hello, reach out below.</p>
 
-      <!-- Optional Form (non-functional for now) -->
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" disabled>Send (Coming Soon)</button>
-      </form>
-    </section>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://instagram.com/docotelax" target="_blank">Instagram</a>
+      <a href="mailto:contact@docotelax.com">Email</a>
+    </div>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
-    <p>Connect with us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+    &copy; 2025 Docotela X. All rights reserved.
   </footer>
 
-  <!-- JS for Menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      menu.classList.toggle('open');
+      document.getElementById("sideMenu").classList.toggle("open");
     }
   </script>
 </body>
