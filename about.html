@@ -7,45 +7,62 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Navigation -->
+
+  <!-- Navigation -->
   <div class="top-nav">
     <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
   <!-- Side Menu -->
   <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="gallery.html">Art Gallery</a>
     <a href="members.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-container">
-      <h1>About Docotela X</h1>
-      <p class="about-intro">Docotela X is more than a brand — it’s a movement.</p>
-      <p>Born from the desire to express freedom through craftsmanship, Docotela X invites the world into the soul of independent artistry. Each piece is handcrafted, limited, and infused with the spirit of rebellion against the ordinary.</p>
-      <p>Founded on the philosophy that fashion is wearable art, our collections are deeply personal — a mirror of the creator’s journey and the wearer's sense of identity.</p>
-      <p>From the first sketch to the final stitch, our goal is simple: make you feel something real.</p>
+  <!-- About Content -->
+  <div class="about-container">
+    <h1 class="gold-heading">About Docotela X</h1>
+
+    <blockquote class="quote">
+      "Docotela X is more than a brand. It’s a rebellion. A feeling. A movement of art expressed through the craft of fashion."
+    </blockquote>
+
+    <p>
+      Born from the struggle of chasing freedom and the courage to live with intention, Docotela X exists to embody a lifestyle of fearless expression.
+      Each piece reflects our journey — raw, poetic, and unfiltered.
+    </p>
+
+    <p>
+      We don’t just design clothing. We design experiences. From the soul of a 1978 VW Beetle rebuilt with vision, to collections crafted by young artists,
+      our message is clear: authenticity is freedom.
+    </p>
+
+    <p>
+      Welcome to the story. Welcome to the feeling. Welcome to Docotela X.
+    </p>
+
+    <!-- Optional image section -->
+    <div class="about-image">
+      <img src="placeholder.jpg" alt="Docotela Concept Art" />
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p>Connect with us on <a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
+    &copy; 2025 Docotela X | <a href="https://instagram.com/docotelax" target="_blank">Instagram</a>
   </footer>
 
   <script>
     function toggleMenu() {
-      const sideMenu = document.getElementById('sideMenu');
-      sideMenu.classList.toggle('open');
+      document.getElementById("sideMenu").classList.toggle("open");
     }
   </script>
 </body>
