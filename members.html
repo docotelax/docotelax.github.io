@@ -5,127 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Members Only - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: black;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .password-box {
-      max-width: 400px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    }
-
-    .password-box h2 {
-      margin-bottom: 20px;
-      font-weight: normal;
-      letter-spacing: 1px;
-    }
-
-    .password-box input {
-      padding: 12px;
-      width: 100%;
-      border: none;
-      outline: none;
-      border-radius: 5px;
-      background-color: #222;
-      color: white;
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .password-box button {
-      padding: 12px 30px;
-      font-size: 1rem;
-      border: 1px solid white;
-      background: transparent;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .password-box button:hover {
-      background: white;
-      color: black;
-    }
-
-    .members-content {
-      display: none;
-      margin-top: 20px;
-    }
-
-    .error-message {
-      color: red;
-      margin-top: 10px;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Navbar (same across all pages) -->
-  <div class="navbar">
-    <div class="top-center-links">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="dropdown-menu" id="dropdownMenu">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="membersonly.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <div class="nav-right">
+      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
+  </nav>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="membersonly.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Password Entry -->
-  <div class="password-box">
-    <h2>Members Only Access</h2>
-    <input type="password" id="passwordInput" placeholder="Enter password" />
-    <button onclick="checkPassword()">Enter</button>
-    <div class="error-message" id="errorMessage"></div>
+  <!-- Members Login Section -->
+  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
+    <h1>Members Only Access</h1>
+    <p>This section is password protected. Please enter the password to continue.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password" style="padding:10px; border-radius:5px; border:none;"/>
+    <br>
+    <button onclick="checkPassword()" class="enter-button" style="margin-top:15px;">Enter</button>
+    <div id="error-message" style="color: red; margin-top: 10px;"></div>
   </div>
 
-  <!-- Hidden Members-Only Content -->
-  <div class="members-content" id="membersContent">
-    <h2>Welcome to the Private Docotela X Collection</h2>
-    <p>This is where exclusive content and pieces will be showcased.</p>
-    <!-- Add your private collection/gallery here -->
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p>Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
 
   <script>
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      const error = document.getElementById("errorMessage");
-      const content = document.getElementById("membersContent");
-      if (input === "memberson1y") {
-        document.querySelector(".password-box").style.display = "none";
-        content.style.display = "block";
-        error.textContent = "";
-      } else {
-        error.textContent = "Incorrect password. Try again.";
-      }
-    }
-
     function toggleMenu() {
       const menu = document.getElementById("dropdownMenu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.classList.toggle("open");
+    }
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      if (password === "memberson1y") {
+        window.location.href = "private.html";
+      } else {
+        document.getElementById("error-message").textContent = "Incorrect password.";
+      }
     }
   </script>
 </body>
