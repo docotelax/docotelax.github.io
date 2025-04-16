@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docotela X</title>
+  <title>Welcome to Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Top Navbar -->
-  <div class="top-bar">
-    <div class="top-center-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <ul class="nav-top-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </div>
+    <div class="nav-right">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul class="dropdown-menu" id="dropdownMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="members.html">Members Only</a></li>
+        <li><a href="gallery.html">Art Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Dropdown Menu -->
-  <div class="dropdown-menu" id="dropdown">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- Hero Section -->
+  <!-- Logo and Hero Section -->
   <div class="logo-container">
-    <img src="assets/image0.png" alt="Docotela X Logo"/>
+    <img src="assets/image0.png" alt="Docotela X Logo" />
   </div>
 
   <div class="hero-text">
@@ -41,7 +43,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations: 
+    <p>
+      For inquiries or collaborations: 
       <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
     </p>
     <p style="margin-top: 6px;">
@@ -52,8 +55,8 @@
 
   <script>
     function toggleMenu() {
-      const dropdown = document.getElementById("dropdown");
-      dropdown.classList.toggle("open");
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
     }
   </script>
 
