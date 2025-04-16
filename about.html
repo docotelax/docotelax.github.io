@@ -2,60 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Navigation (same as index.html) -->
-  <nav class="navbar">
-    <div class="nav-center">
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="nav-right">
-      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </nav>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </div>
 
-  <!-- Dropdown Menu -->
-  <div class="dropdown-menu" id="dropdownMenu">
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="membersonly.html">Members Only</a>
+    <a href="members.html">Members Only</a>
     <a href="gallery.html">Art Gallery</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- About Content -->
-  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
-    <h1>About Docotela X</h1>
-    <p>
-      Docotela X was born out of a journey toward freedom and creative expression. Every piece we craft embodies a unique story—one that is personal, bold, and transformative.
-      <br><br>
-      We believe that clothing can be art and that every individual has a story to tell. Through our exclusive collections, we strive to empower you to wear your truth.
-    </p>
+  <!-- About Section -->
+  <div class="main-container">
+    <section class="about-section">
+      <h1>About Docotela X</h1>
+      <p>Docotela X is more than a brand — it’s a journey through art, emotion, and exclusive craftsmanship.</p>
+      <p>Born from the pursuit of freedom, each collection tells a story, handcrafted with intention and limited in existence.</p>
+      <p>We don't sell clothes. We share moments. Experiences. Art you can wear.</p>
+      <p>Founded in Johannesburg, South Africa — this is for the few who feel it.</p>
+    </section>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations:
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p>Follow us on Instagram:
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+    <p>Connect with us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
   </footer>
 
+  <!-- JS for Menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.classList.toggle("open");
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
     }
   </script>
-  
 </body>
 </html>
