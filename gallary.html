@@ -3,51 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art Gallery - Docotela X</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Art Gallery | Docotela X</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-center">
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="nav-right">
-      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </nav>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </div>
 
-  <div class="dropdown-menu" id="dropdownMenu">
+  <!-- Side Menu -->
+  <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="membersonly.html">Members Only</a>
+    <a href="members.html">Members Only</a>
     <a href="gallery.html">Art Gallery</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Gallery Content -->
-  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
-    <h1>Art Gallery</h1>
-    <p>Exclusive visuals and handcrafted pieces will appear here soon.</p>
+  <!-- Art Gallery -->
+  <div class="main-container">
+    <section class="gallery-section">
+      <h1>The Art of Freedom</h1>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/art1.jpg" alt="Art 1"/>
+          <p>Untitled Piece 01</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/art2.jpg" alt="Art 2"/>
+          <p>Freedom in Form</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/art3.jpg" alt="Art 3"/>
+          <p>Crafted Chaos</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/art4.jpg" alt="Art 4"/>
+          <p>Hand-Touched Silence</p>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations:
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p>Follow us on Instagram:
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+    <p>Connect with us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
   </footer>
 
+  <!-- JS for Menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.classList.toggle("open");
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
     }
   </script>
 </body>
