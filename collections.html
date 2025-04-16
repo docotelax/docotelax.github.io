@@ -2,72 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Collections - Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docotela X | Collections</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-center">
+  <header class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="nav-right">
-      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-  </nav>
+  </header>
 
-  <div class="dropdown-menu" id="dropdownMenu">
+  <nav class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="membersonly.html">Members Only</a>
+    <a href="members.html">Members Only</a>
     <a href="gallery.html">Art Gallery</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-  </div>
+  </nav>
 
-  <!-- Collections Content -->
-  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
-    <h1>The Collections</h1>
-    <div class="collections-container">
-      <div class="collection-item">
+  <main class="main-container">
+    <h1 class="page-title">Collections</h1>
+    <div class="collection-showcase">
+      <div class="collection-card">
+        <img src="freedom.jpg" alt="The Feeling of Freedom" />
         <h2>The Feeling of Freedom</h2>
       </div>
-      <div class="collection-item">
+      <div class="collection-card">
+        <img src="perspectives.jpg" alt="4 Perspectives 1 Story" />
         <h2>4 Perspectives 1 Story</h2>
       </div>
-      <div class="collection-item">
+      <div class="collection-card">
+        <img src="8deity.jpg" alt="The 8deity" />
         <h2>The 8deity</h2>
       </div>
-      <div class="collection-item">
+      <div class="collection-card">
+        <img src="quietspace.jpg" alt="Quiet Space" />
         <h2>Quiet Space</h2>
       </div>
-      <div class="collection-item">
+      <div class="collection-card">
+        <img src="lostart.jpg" alt="Lost in the Art of Chasing Freedom" />
         <h2>Lost in the Art of Chasing Freedom</h2>
       </div>
-      <div class="collection-item">
+      <div class="collection-card">
+        <img src="emptiness.jpg" alt="Found in Emptiness" />
         <h2>Found in Emptiness</h2>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations:
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p>Follow us on Instagram:
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
+    <p>Contact: <a href="mailto:docotelax@gmail.com">docotelax@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.classList.toggle("open");
+      const sideMenu = document.getElementById('sideMenu');
+      sideMenu.classList.toggle('open');
     }
   </script>
 </body>
