@@ -1,231 +1,57 @@
-/* Reset & Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="nav-item">Home</span>
+      <span class="nav-item">About</span>
+      <span class="nav-item">Contact</span>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
 
-/* Navigation Bar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
-}
+  <!-- Hamburger Menu Content -->
+  <div class="side-menu" id="sideMenu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="members.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-.navbar .center-links {
-  font-size: 1.1rem;
-  display: flex;
-  gap: 40px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  <!-- Main Section -->
+  <div class="main-content">
+    <div class="logo-container">
+      <img src="assets/image0.png" alt="Docotela X Logo">
+    </div>
+    <div class="hero-text">
+      <h1>Docotela X</h1>
+      <p>Your Story. Your Style. Docotela X</p>
+      <a href="collections.html" class="enter-button">Enter</a>
+    </div>
+  </div>
 
-.navbar .center-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries: <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a></p>
+    <p>Follow us on Instagram: <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a></p>
+  </footer>
 
-.navbar .center-links a:hover {
-  color: gold;
-}
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
 
-.hamburger {
-  position: absolute;
-  right: 30px;
-  top: 15px;
-  cursor: pointer;
-  display: block;
-  z-index: 1001;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-}
-
-/* Side Menu */
-.side-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.4s;
-  padding-top: 60px;
-  z-index: 999;
-}
-
-.side-menu a {
-  padding: 12px 32px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: white;
-  display: block;
-  transition: 0.3s;
-}
-
-.side-menu a:hover {
-  color: gold;
-}
-
-.side-menu .close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 36px;
-}
-
-/* Hero Section (Homepage) */
-.logo-container {
-  margin-top: 100px;
-}
-
-.logo-container img {
-  width: 300px;
-  max-width: 85%;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 20px 0 10px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-.enter-button {
-  padding: 14px 30px;
-  font-size: 1rem;
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.enter-button:hover {
-  background-color: white;
-  color: black;
-}
-
-/* Footer */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #aaa;
-  text-align: center;
-  padding: 12px 20px;
-  font-size: 0.95rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: gold;
-}
-
-/* Collections Page */
-.collections-container {
-  margin-top: 120px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.collection-item {
-  max-width: 800px;
-  width: 100%;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.collection-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.collection-item h2 {
-  margin-top: 15px;
-  font-size: 1.5rem;
-}
-
-.collection-item a {
-  margin-top: 10px;
-  display: inline-block;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
-  border: 1px solid white;
-  padding: 10px 24px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.collection-item a:hover {
-  background-color: white;
-  color: black;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar .center-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-
-  .enter-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-}
+</body>
+</html>
