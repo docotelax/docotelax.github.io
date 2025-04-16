@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Members Only - Docotela X</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Members Only – Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Navigation -->
+
+  <!-- Navigation -->
   <div class="top-nav">
     <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
   <!-- Side Menu -->
-  <div id="sideMenu" class="side-menu">
+  <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -27,22 +28,24 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Main Members Content -->
+  <!-- Members Only Section -->
   <div class="main-container">
-    <h2>Members Only</h2>
-    <p>Enter the password to access exclusive content.</p>
+    <h1>Members Only</h1>
+    <p>Enter your exclusive pass to unlock private content.</p>
     <form id="password-form" onsubmit="checkPassword(event)">
-      <input type="password" placeholder="Enter Password" id="password-input">
-      <button type="submit">Submit</button>
+      <input type="password" id="password" placeholder="Enter Password" required />
+      <button type="submit">Unlock</button>
     </form>
-    <div id="members-content" style="display: none;">
-      <h2>Welcome, Insider.</h2>
-      <p>You now have access to exclusive Docotela X content.</p>
+
+    <div id="members-content" style="display:none;">
+      <h2>Welcome to the Inner Circle</h2>
+      <p>This is your exclusive access to behind-the-scenes concepts, unreleased art, and private drop previews.</p>
     </div>
   </div>
 
   <footer>
-    <p>Contact: <a href="mailto:docotelax@gmail.com">docotelax@gmail.com</a> | Instagram: <a href="https://instagram.com/docotelax">@docotelax</a></p>
+    &copy; 2025 Docotela X. All rights reserved. |
+    <a href="https://instagram.com/docotelax" target="_blank">Instagram</a>
   </footer>
 
   <script>
@@ -53,12 +56,12 @@
 
     function checkPassword(event) {
       event.preventDefault();
-      const password = document.getElementById("password-input").value;
-      if (password === "memberson1y") {
+      const input = document.getElementById("password").value;
+      if (input === "memberson1y") {
         document.getElementById("password-form").style.display = "none";
         document.getElementById("members-content").style.display = "block";
       } else {
-        alert("Incorrect password.");
+        alert("Incorrect password. Please try again.");
       }
     }
   </script>
