@@ -2,26 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Members Only - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left"></div>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+
+  <!-- Hamburger Menu Content -->
+  <div class="menu-overlay" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="members.html">Members Only</a></li>
+      <li><a href="gallery.html">Art Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Content -->
+  <div class="main-content">
+    <h1>Members Only</h1>
+    <p>This section is restricted. Please enter the password to view.</p>
+
+    <input type="password" id="passwordInput" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Enter</button>
+
+    <div id="membersContent" style="display:none; margin-top: 30px;">
+      <h2>Welcome, Member.</h2>
+      <p>This is exclusive content only for Docotela X members. Thank you for being part of the journey.</p>
+      <p>[Insert member-only artwork, collections, or links here]</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+
   <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+
     function checkPassword() {
-      const password = prompt("Enter password to access:");
-      if (password !== "memberson1y") {
+      const input = document.getElementById('passwordInput').value;
+      const correctPassword = "memberson1y";
+      const content = document.getElementById('membersContent');
+
+      if (input === correctPassword) {
+        content.style.display = "block";
+      } else {
         alert("Incorrect password.");
-        window.location.href = "index.html";
       }
     }
   </script>
-</head>
-<body onload="checkPassword()">
-  <!-- Navigation -->
-  [Insert the same nav from index.html above]
-
-  <div class="members-section">
-    <h2>Welcome to the Members-Only Section</h2>
-    <p>Exclusive pieces and private access coming soon.</p>
-  </div>
 </body>
 </html>
