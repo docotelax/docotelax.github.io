@@ -141,8 +141,11 @@ footer a:visited {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-top-links {
-    gap: 20px;
+  .dropdown-menu {
+    right: 10px;
+    left: auto;
+  }
+}
   }
   .nav-top-links li a {
     font-size: 1rem;
