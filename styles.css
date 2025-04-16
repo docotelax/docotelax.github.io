@@ -1,4 +1,4 @@
-/* Base Style */
+/* General Reset & Base */
 body {
   margin: 0;
   padding: 0;
@@ -8,76 +8,94 @@ body {
   text-align: center;
 }
 
-/* Navigation */
-.top-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 14px 40px;
+/* Navbar Styles */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 999;
+  padding: 15px 30px;
+  background-color: #000;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.top-center-links {
+/* Center links */
+.nav-left {
   display: flex;
-  gap: 30px;
-  font-size: 1.1rem;
+  gap: 20px;
+  margin: auto;
 }
 
-.top-center-links a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s;
-}
-
-.top-center-links a:hover {
-  color: gold;
-}
-
-.hamburger {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: white;
-}
-
-.menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 40px;
-  background-color: #111;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: right;
-}
-
-.menu a {
-  display: block;
-  margin: 10px 0;
+.nav-left .nav-link {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
+.nav-left .nav-link:hover {
   color: gold;
 }
 
-.menu.show {
-  display: block;
+/* Hamburger Menu */
+.nav-right {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+  color: gold;
+}
+
+.show {
+  display: flex;
 }
 
 /* Hero Section */
 .logo-container {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .logo-container img {
   width: 300px;
-  max-width: 90%;
+  max-width: 80%;
+}
+
+.hero-text {
+  margin-top: 30px;
 }
 
 .hero-text h1 {
@@ -110,34 +128,85 @@ body {
 /* Footer */
 footer {
   margin-top: 60px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: #000;
   color: #aaa;
-  font-size: 0.95rem;
+  padding: 20px;
+  font-size: 0.9rem;
 }
 
 footer a {
-  color: white;
+  color: gold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: gold;
+  color: white;
 }
 
-/* Responsive */
+/* Collection Page */
+.collection-page {
+  padding: 40px 20px;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.collection-card {
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.collection-card h3 {
+  margin-bottom: 10px;
+}
+
+.collection-card a {
+  color: gold;
+  text-decoration: none;
+}
+
+.collection-card a:hover {
+  color: white;
+}
+
+/* About & Contact */
+.about-section, .contact-section, .collection-showcase, .members-section {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section p, .contact-section p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .top-center-links {
+  .nav-left {
     display: none;
   }
 
-  .hamburger {
+  .menu-toggle {
     display: block;
   }
-}
 
-@media (max-height: 600px) {
-  footer {
-    position: static;
+  .dropdown-menu {
+    right: 10px;
+    top: 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
   }
 }
