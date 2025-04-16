@@ -12,11 +12,12 @@ body {
 .top-nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 1000;
 }
@@ -38,22 +39,29 @@ body {
   color: gold;
 }
 
-/* Hamburger Menu */
+/* Hamburger Icon */
 .hamburger {
+  position: absolute;
+  top: 20px;
+  right: 40px;
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  z-index: 1100;
 }
 
+/* Hamburger Menu Dropdown */
 .menu {
   display: none;
-  position: absolute;
-  top: 80px;
-  right: 40px;
+  position: fixed;
+  top: 70px;
+  right: 20px;
   background-color: #111;
   padding: 20px;
   border-radius: 5px;
   text-align: right;
+  z-index: 1100;
+  width: 200px;
 }
 
 .menu a {
@@ -127,7 +135,7 @@ footer a:hover {
   color: gold;
 }
 
-/* Responsive */
+/* Mobile View */
 @media (max-width: 768px) {
   .top-center-links {
     display: none;
