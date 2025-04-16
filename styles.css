@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 
-/* Top Center Navigation */
+/* Top Navigation Bar */
 .top-nav {
   display: flex;
   justify-content: space-between;
@@ -21,6 +21,7 @@ body {
   z-index: 1000;
 }
 
+/* Center Navigation Links */
 .top-links {
   position: absolute;
   left: 50%;
@@ -40,14 +41,18 @@ body {
   color: gold;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu Button */
 .hamburger {
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  z-index: 1001;
 }
 
-/* Slide-out Side Menu */
+/* Slide-out Menu */
 .side-menu {
   position: fixed;
   top: 0;
@@ -55,13 +60,13 @@ body {
   width: 250px;
   height: 100%;
   background-color: #111;
-  padding-top: 80px;
+  padding-top: 100px;
   transition: right 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-left: 30px;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .side-menu a {
@@ -80,7 +85,7 @@ body {
   right: 0;
 }
 
-/* Logo and Hero Section */
+/* Logo Section */
 .logo-container {
   margin-top: 130px;
 }
@@ -123,7 +128,7 @@ body {
   color: black;
 }
 
-/* Collections Grid */
+/* Collections Page */
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -155,33 +160,36 @@ body {
   color: gold;
 }
 
-/* Members Only */
+/* Members Page */
 .main-container {
-  padding-top: 140px;
-  text-align: center;
+  padding-top: 160px;
+}
+
+#password-form {
+  margin-top: 40px;
 }
 
 #password-form input[type="password"] {
-  padding: 10px;
-  width: 220px;
+  padding: 12px;
+  width: 240px;
   font-size: 1rem;
   border: 1px solid #555;
   border-radius: 5px;
-  margin-top: 20px;
   background-color: #111;
   color: white;
   text-align: center;
 }
 
 #password-form button {
-  margin-left: 10px;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 12px 30px;
   background-color: white;
   color: black;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 #password-form button:hover {
@@ -218,7 +226,7 @@ footer a:hover {
   color: gold;
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
   .top-links {
     gap: 20px;
@@ -228,13 +236,14 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  .hamburger {
-    font-size: 1.6rem;
-  }
-
   .side-menu {
     width: 200px;
     padding-left: 20px;
+  }
+
+  .hamburger {
+    font-size: 1.6rem;
+    right: 20px;
   }
 
   .hero-text h1 {
@@ -255,13 +264,8 @@ footer a:hover {
     padding: 140px 20px 60px;
   }
 
-  .main-container {
-    padding: 20px;
-  }
-
   #password-form input[type="password"],
   #password-form button {
-    width: 100%;
-    margin: 10px 0;
+    width: 90%;
   }
 }
