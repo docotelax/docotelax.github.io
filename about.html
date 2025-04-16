@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Docotela X</title>
+  <title>About - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Navigation -->
   <div class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
-  <!-- Side Menu -->
   <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
@@ -28,41 +25,50 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- About Content -->
-  <div class="about-container">
-    <h1 class="gold-heading">About Docotela X</h1>
+  <main class="about-section">
+    <h1 class="fade-in">The Story Behind Docotela X</h1>
+    <p class="fade-in delay-1">"Born from struggle. Inspired by freedom. Built to last."</p>
+    <img src="https://images.unsplash.com/photo-1558980664-10ea74f9e273?auto=format&fit=crop&w=1050&q=80" alt="Docotela X Philosophy" class="about-image fade-in delay-2"/>
 
-    <blockquote class="quote">
-      "Docotela X is more than a brand. It’s a rebellion. A feeling. A movement of art expressed through the craft of fashion."
-    </blockquote>
+    <section class="about-content fade-in delay-3">
+      <p>
+        Docotela X was born from the idea that true freedom comes from creating without compromise.
+        Our founder spent years crafting a custom 1978 VW Beetle, building every inch from a bare shell —
+        proving consistency, patience, and vision. That same energy now drives every collection we release.
+      </p>
+    </section>
 
-    <p>
-      Born from the struggle of chasing freedom and the courage to live with intention, Docotela X exists to embody a lifestyle of fearless expression.
-      Each piece reflects our journey — raw, poetic, and unfiltered.
-    </p>
-
-    <p>
-      We don’t just design clothing. We design experiences. From the soul of a 1978 VW Beetle rebuilt with vision, to collections crafted by young artists,
-      our message is clear: authenticity is freedom.
-    </p>
-
-    <p>
-      Welcome to the story. Welcome to the feeling. Welcome to Docotela X.
-    </p>
-
-    <!-- Optional image section -->
-    <div class="about-image">
-      <img src="placeholder.jpg" alt="Docotela Concept Art" />
-    </div>
-  </div>
+    <section class="timeline-section fade-in delay-4">
+      <h2>Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">2019</span>
+          <p>Docotela X was just an idea scribbled in a notebook.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2021</span>
+          <p>The Beetle build begins — a symbol of resilience and vision.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2023</span>
+          <p>“Freedom as a Feeling” is born. Design takes a new direction.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2025</span>
+          <p>Launch of Docotela X. Limited collections meet pure storytelling.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Docotela X | <a href="https://instagram.com/docotelax" target="_blank">Instagram</a>
+    <p>Contact us via <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("sideMenu").classList.toggle("open");
+      const sideMenu = document.getElementById('sideMenu');
+      sideMenu.classList.toggle('open');
     }
   </script>
 </body>
