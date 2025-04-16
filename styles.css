@@ -45,7 +45,6 @@ body {
   font-size: 1.8rem;
   color: white;
   cursor: pointer;
-  z-index: 1100;
 }
 
 /* Slide-out Side Menu */
@@ -62,7 +61,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 30px;
-  z-index: 1090;
+  z-index: 999;
 }
 
 .side-menu a {
@@ -156,55 +155,31 @@ body {
   color: gold;
 }
 
-/* Footer */
-footer {
-  margin-top: 60px;
-  padding: 20px 0;
-  background-color: #000;
-  color: #aaa;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: gold;
-}
-
-/* Members Only Page */
+/* Members Only */
 .main-container {
   padding-top: 140px;
   text-align: center;
 }
 
-#password-form {
-  margin-top: 40px;
-}
-
 #password-form input[type="password"] {
-  padding: 12px;
-  width: 250px;
+  padding: 10px;
+  width: 220px;
   font-size: 1rem;
   border: 1px solid #555;
   border-radius: 5px;
+  margin-top: 20px;
   background-color: #111;
   color: white;
   text-align: center;
 }
 
 #password-form button {
-  margin-top: 20px;
-  padding: 12px 30px;
+  margin-left: 10px;
+  padding: 10px 20px;
   background-color: white;
   color: black;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -224,7 +199,26 @@ footer a:hover {
   margin: 20px 0;
 }
 
-/* Responsive */
+/* Footer */
+footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  background-color: #000;
+  color: #aaa;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: gold;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .top-links {
     gap: 20px;
@@ -234,13 +228,13 @@ footer a:hover {
     font-size: 1rem;
   }
 
+  .hamburger {
+    font-size: 1.6rem;
+  }
+
   .side-menu {
     width: 200px;
     padding-left: 20px;
-  }
-
-  .hamburger {
-    font-size: 1.6rem;
   }
 
   .hero-text h1 {
@@ -261,9 +255,13 @@ footer a:hover {
     padding: 140px 20px 60px;
   }
 
+  .main-container {
+    padding: 20px;
+  }
+
   #password-form input[type="password"],
   #password-form button {
-    width: 90%;
+    width: 100%;
     margin: 10px 0;
   }
 }
