@@ -1,75 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Members Only – Docotela X</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script>
-    function checkPassword() {
-      const password = document.getElementById('password').value;
-      if (password === 'memberson1y') {
-        document.getElementById('members-content').style.display = 'block';
-        document.getElementById('password-form').style.display = 'none';
-      } else {
-        alert('Incorrect password.');
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members Only - Docotela X</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="nav-links-center">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-    <div id="menu" class="dropdown-menu">
+  <!-- Top Navigation -->
+  <div class="top-nav">
+    <div class="top-links">
       <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="members.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-  </header>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </div>
 
-  <!-- Password Form -->
-  <main class="main-container">
-    <div id="password-form">
-      <h1 class="page-title">Members Only</h1>
-      <p>Enter the password to access exclusive content:</p>
-      <input type="password" id="password" placeholder="Enter password" />
-      <button onclick="checkPassword()">Submit</button>
-    </div>
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="members.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <!-- Protected Content -->
-    <div id="members-content" style="display:none;">
-      <h2>Welcome to the Private Side of Docotela X</h2>
-      <p>This section includes unreleased work, private collections, and artist features.</p>
-      <p>Only for true supporters of the vision.</p>
+  <!-- Main Members Content -->
+  <div class="main-container">
+    <h2>Members Only</h2>
+    <p>Enter the password to access exclusive content.</p>
+    <form id="password-form" onsubmit="checkPassword(event)">
+      <input type="password" placeholder="Enter Password" id="password-input">
+      <button type="submit">Submit</button>
+    </form>
+    <div id="members-content" style="display: none;">
+      <h2>Welcome, Insider.</h2>
+      <p>You now have access to exclusive Docotela X content.</p>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <p>
-      For inquiries or collaborations:
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p>
-      Follow us on Instagram:
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
+    <p>Contact: <a href="mailto:docotelax@gmail.com">docotelax@gmail.com</a> | Instagram: <a href="https://instagram.com/docotelax">@docotelax</a></p>
   </footer>
 
   <script>
     function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.classList.toggle('show');
+      const menu = document.getElementById("sideMenu");
+      menu.classList.toggle("open");
+    }
+
+    function checkPassword(event) {
+      event.preventDefault();
+      const password = document.getElementById("password-input").value;
+      if (password === "memberson1y") {
+        document.getElementById("password-form").style.display = "none";
+        document.getElementById("members-content").style.display = "block";
+      } else {
+        alert("Incorrect password.");
+      }
     }
   </script>
 </body>
