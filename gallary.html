@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css" />
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Art Gallery - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      <div id="navbar-placeholder"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
-      background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 40px;
-    }
-
-    .placeholder {
-      border: 2px dashed #444;
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: auto;
-      color: #888;
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
 
-  <h1>Docotela X Art Gallery</h1>
-  <p>Where the essence of art and fashion blend — Coming Soon</p>
-
-  <div class="placeholder">
-    This is where your gallery will live. Original artwork, limited designs, and exclusive visuals will be showcased here soon.
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="membersonly.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
+  <!-- Gallery Content -->
+  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
+    <h1>Art Gallery</h1>
+    <p>Exclusive visuals and handcrafted pieces will appear here soon.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p>Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
