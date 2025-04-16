@@ -1,48 +1,53 @@
-/* General Layout */
+/* Global Styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   text-align: center;
 }
 
-/* Navbar */
-.navbar {
+/* Top Center Navigation */
+.top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 30px;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #000;
   z-index: 1000;
 }
 
-.nav-left {
+.top-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 30px;
 }
 
-.nav-item {
-  font-size: 1.1rem;
+.top-links a {
   color: white;
-  cursor: pointer;
-  transition: color 0.3s;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-.nav-item:hover {
+.top-links a:hover {
   color: gold;
 }
 
-.menu-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Hamburger Menu */
+.hamburger {
+  font-size: 1.8rem;
   color: white;
+  cursor: pointer;
 }
 
-/* Hamburger Menu */
+/* Slide-out Side Menu */
 .side-menu {
   position: fixed;
   top: 0;
@@ -51,40 +56,40 @@ body {
   height: 100%;
   background-color: #111;
   padding-top: 80px;
+  transition: right 0.4s ease;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-start;
   padding-left: 30px;
-  transition: right 0.3s ease;
   z-index: 999;
-}
-
-.side-menu.open {
-  right: 0;
 }
 
 .side-menu a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  margin: 15px 0;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .side-menu a:hover {
   color: gold;
 }
 
-/* Logo */
+.side-menu.open {
+  right: 0;
+}
+
+/* Logo and Hero Section */
 .logo-container {
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 .logo-container img {
-  width: 300px;
-  max-width: 90%;
+  width: 250px;
+  max-width: 80%;
 }
 
-/* Hero Text */
 .hero-text {
   margin-top: 30px;
 }
@@ -100,7 +105,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Button */
 .enter-button {
   padding: 14px 30px;
   font-size: 1rem;
@@ -119,8 +123,8 @@ body {
 
 /* Footer */
 footer {
-  margin-top: 80px;
-  padding: 20px;
+  margin-top: 60px;
+  padding: 20px 0;
   background-color: #000;
   color: #aaa;
   font-size: 0.95rem;
@@ -135,21 +139,35 @@ footer a:hover {
   color: gold;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .nav-left {
-    display: none;
+/* Responsive */
+@media (max-width: 768px) {
+  .top-links {
+    gap: 20px;
   }
 
-  .menu-icon {
-    display: block;
+  .top-links a {
+    font-size: 1rem;
   }
 
-  .logo-container {
-    margin-top: 100px;
+  .side-menu {
+    width: 200px;
+    padding-left: 20px;
+  }
+
+  .hamburger {
+    font-size: 1.6rem;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .enter-button {
+    font-size: 0.95rem;
+    padding: 12px 25px;
+  }
+
+  .logo-container img {
+    width: 200px;
   }
 }
