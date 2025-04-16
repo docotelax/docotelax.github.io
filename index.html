@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docotela X - The Feeling of Freedom</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Top Navbar -->
-  <div class="top-bar">
-    <div class="top-center-links">
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="center-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="openMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 
-  <!-- Dropdown Menu -->
-  <div class="dropdown-menu" id="dropdown">
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -29,31 +34,28 @@
   </div>
 
   <!-- Hero Section -->
-  <div class="logo-container">
-    <img src="assets/image0.png" alt="Docotela X Logo"/>
-  </div>
-
-  <div class="hero-text">
-    <h1>Docotela X</h1>
-    <p>Your Story. Your Style. Docotela X</p>
-    <a href="collections.html" class="enter-button">Enter the Gallery</a>
+  <div class="logo-container" style="text-align: center; margin-top: 120px;">
+    <img src="images/cover.jpg" alt="Docotela X Logo">
+    <div class="hero-text">
+      <h1>Docotela X</h1>
+      <p>The Feeling of Freedom</p>
+      <a href="collections.html" class="enter-button">Enter the Gallery</a>
+    </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations: 
-      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
-    </p>
-    <p style="margin-top: 6px;">
-      Follow us on Instagram: 
-      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
-    </p>
+    For inquiries: <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a>
   </footer>
 
+  <!-- JavaScript for Menu -->
   <script>
-    function toggleMenu() {
-      const dropdown = document.getElementById("dropdown");
-      dropdown.classList.toggle("open");
+    function openMenu() {
+      document.getElementById("sideMenu").style.width = "250px";
+    }
+
+    function closeMenu() {
+      document.getElementById("sideMenu").style.width = "0";
     }
   </script>
 
