@@ -1,168 +1,128 @@
-/* Reset default styles */
-* {
+/* Base styles */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
-
-.nav-center {
+/* Navbar top links (center) */
+.top-center-links {
   position: absolute;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 40px;
+  font-size: 18px;
+  z-index: 10;
 }
 
-.nav-center a {
-  text-decoration: none;
-  font-size: 1.2rem;
+.top-center-links a {
   color: white;
-  transition: color 0.3s;
-  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.nav-center a:hover {
+.top-center-links a:hover {
   color: gold;
 }
 
-/* Hamburger */
+/* Hamburger menu top-right */
 .hamburger {
-  font-size: 1.8rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
   color: white;
-  background: none;
-  border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10;
 }
 
+/* Dropdown menu */
 .dropdown-menu {
   display: none;
+  flex-direction: column;
   position: fixed;
   top: 60px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.98);
-  border: 1px solid #444;
-  padding: 15px 20px;
-  border-radius: 8px;
-  z-index: 1000;
-  flex-direction: column;
-  min-width: 200px;
+  right: 30px;
+  background-color: #111;
+  padding: 20px;
+  border: 1px solid #333;
+  z-index: 9;
+  width: 200px;
+  border-radius: 4px;
 }
 
 .dropdown-menu a {
   color: white;
   text-decoration: none;
-  padding: 10px 0;
-  transition: color 0.3s;
-  font-size: 1rem;
+  margin: 10px 0;
+  transition: color 0.3s ease;
 }
 
 .dropdown-menu a:hover {
   color: gold;
 }
 
-.dropdown-menu.show {
-  display: flex;
-}
-
-/* Hero section */
-.logo-container {
-  margin-top: 100px;
-  text-align: center;
-}
-
-.logo-container img {
-  width: 300px;
-  max-width: 80%;
-}
-
-.hero-text {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-}
-
-.enter-button {
-  padding: 14px 30px;
-  font-size: 1rem;
-  background-color: transparent;
-  border: 2px solid white;
+/* Gallery buttons or links at the bottom */
+a:visited, a:active {
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
-.enter-button:hover {
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Image styling for homepage */
+.fullscreen-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Button on homepage */
+.center-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.center-button:hover {
   background-color: white;
   color: black;
 }
 
-/* Footer */
-footer {
-  margin-top: 80px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #aaa;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.95rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: gold;
-}
-
-/* Responsive Fixes */
+/* Responsive tweaks */
 @media (max-width: 768px) {
-  .nav-center {
+  .top-center-links {
+    font-size: 16px;
     gap: 20px;
   }
 
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
   .dropdown-menu {
-    right: 10px;
+    width: 160px;
+    right: 20px;
+  }
+
+  .hamburger {
+    right: 20px;
   }
 }
