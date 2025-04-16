@@ -2,123 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docotela X Collections</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      <div id="navbar-placeholder"></div>
-<script>
-  fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-    });
-
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-</script>
-
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Helvetica Neue', sans-serif;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.8rem;
-      color: #ffffff;
-    }
-
-    .collection-card {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 30px;
-      margin: 30px auto;
-      max-width: 600px;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    }
-
-    .collection-card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: #ffffff;
-    }
-
-    .collection-card p {
-      font-size: 1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .view-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #ffffff;
-      color: #0d0d0d;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .view-button:hover {
-      background-color: #d4d4d4;
-    }
-
-    a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #ccc;
-    }
-  </style>
 </head>
 <body>
-  <h1>Docotela X Collections</h1>
+  <!-- Navigation -->
+  [Insert the same nav from index.html above]
 
-  <div class="collection-card">
-    <h2>The Feeling of Freedom</h2>
-    <p>A celebration of movement, space, and individuality — wearable art that breathes freedom.</p>
-    <a href="freedom.html" class="view-button">View Collection</a>
+  <div class="collection-page">
+    <h2>Collections</h2>
+    <div class="collection-grid">
+      <div class="collection-card">
+        <h3>The Feeling of Freedom</h3>
+        <a href="freedom.html">View Collection</a>
+      </div>
+      <div class="collection-card">
+        <h3>4 Perspectives 1 Story</h3>
+        <a href="4perspectives.html">View Collection</a>
+      </div>
+      <div class="collection-card">
+        <h3>The 8deity</h3>
+        <a href="8deity.html">View Collection</a>
+      </div>
+      <div class="collection-card">
+        <h3>Quiet Space</h3>
+        <a href="quietspace.html">View Collection</a>
+      </div>
+      <div class="collection-card">
+        <h3>Lost in the Art of Chasing Freedom</h3>
+        <a href="lost.html">View Collection</a>
+      </div>
+      <div class="collection-card">
+        <h3>Found in Emptiness</h3>
+        <a href="found.html">View Collection</a>
+      </div>
+    </div>
   </div>
-
-  <div class="collection-card">
-    <h2>4 Perspectives 1 Story</h2>
-    <p>Four voices. One canvas. This collection reflects contrast and connection.</p>
-    <a href="4perspectives.html" class="view-button">View Collection</a>
-  </div>
-
-  <div class="collection-card">
-    <h2>The 8deity</h2>
-    <p>Only 8 unique pieces—each representing a different form of divine freedom.</p>
-    <a href="8deity.html" class="view-button">View Collection</a>
-  </div>
-
-  <div class="collection-card">
-    <h2>Quiet Space</h2>
-    <p>Where silence speaks through design. Minimalism meets emotion.</p>
-    <a href="quietspace.html" class="view-button">View Collection</a>
-  </div>
-
-  <div class="collection-card">
-    <h2>Lost in the Art of Chasing Freedom</h2>
-    <p>A dreamlike sequence of moments captured in texture, tone, and form.</p>
-    <a href="lostart.html" class="view-button">View Collection</a>
-  </div>
-
-  <div class="collection-card">
-    <h2>Found in Emptiness</h2>
-    <p>Born from stillness. Fashion reimagined as a meditation on identity and space.</p>
-    <a href="found.html" class="view-button">View Collection</a>
-  </div>
-</body>
-</html>
