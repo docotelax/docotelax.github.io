@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Docotela X</title>
+  <title>About - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header class="top-nav">
+  <!-- Navigation (same as index.html) -->
+  <nav class="navbar">
     <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="dropdown-menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="members.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <div class="nav-right">
+      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
-  </header>
+  </nav>
 
-  <section class="page-content">
+  <!-- Dropdown Menu -->
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="membersonly.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- About Content -->
+  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
     <h1>About Docotela X</h1>
-    <p>Docotela X is more than fashion — it's the embodiment of freedom, art, and self-expression. Every collection is a chapter in a personal story, crafted for those who dare to be original.</p>
-  </section>
+    <p>
+      Docotela X was born out of a journey toward freedom and creative expression. Every piece we craft embodies a unique story—one that is personal, bold, and transformative.
+      <br><br>
+      We believe that clothing can be art and that every individual has a story to tell. Through our exclusive collections, we strive to empower you to wear your truth.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries or collaborations:
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p>Follow us on Instagram:
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("menu").classList.toggle("show-menu");
-}
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("open");
+    }
   </script>
+  
 </body>
 </html>
