@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -14,41 +14,38 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
   <!-- Side Menu -->
   <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
     <a href="gallery.html">Art Gallery</a>
+    <a href="members.html">Members Only</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <!-- About Section -->
-  <div class="main-container">
-    <section class="about-section">
+  <section class="about-section">
+    <div class="about-container">
       <h1>About Docotela X</h1>
-      <p>Docotela X is more than a brand — it’s a journey through art, emotion, and exclusive craftsmanship.</p>
-      <p>Born from the pursuit of freedom, each collection tells a story, handcrafted with intention and limited in existence.</p>
-      <p>We don't sell clothes. We share moments. Experiences. Art you can wear.</p>
-      <p>Founded in Johannesburg, South Africa — this is for the few who feel it.</p>
-    </section>
-  </div>
+      <p class="about-intro">Docotela X is more than a brand — it’s a movement.</p>
+      <p>Born from the desire to express freedom through craftsmanship, Docotela X invites the world into the soul of independent artistry. Each piece is handcrafted, limited, and infused with the spirit of rebellion against the ordinary.</p>
+      <p>Founded on the philosophy that fashion is wearable art, our collections are deeply personal — a mirror of the creator’s journey and the wearer's sense of identity.</p>
+      <p>From the first sketch to the final stitch, our goal is simple: make you feel something real.</p>
+    </div>
+  </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
-    <p>Connect with us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+    <p>Connect with us on <a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
   </footer>
 
-  <!-- JS for Menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      menu.classList.toggle('open');
+      const sideMenu = document.getElementById('sideMenu');
+      sideMenu.classList.toggle('open');
     }
   </script>
 </body>
