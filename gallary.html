@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art Gallery | Docotela X</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Docotela X - Art Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Top Navigation -->
@@ -14,11 +14,11 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
-  <!-- Side Menu -->
-  <div class="side-menu" id="sideMenu">
+  <!-- Slide-out Side Menu -->
+  <div id="sideMenu" class="side-menu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -27,39 +27,37 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Art Gallery -->
+  <!-- Gallery Section -->
   <div class="main-container">
-    <section class="gallery-section">
-      <h1>The Art of Freedom</h1>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/art1.jpg" alt="Art 1"/>
-          <p>Untitled Piece 01</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art2.jpg" alt="Art 2"/>
-          <p>Freedom in Form</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art3.jpg" alt="Art 3"/>
-          <p>Crafted Chaos</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art4.jpg" alt="Art 4"/>
-          <p>Hand-Touched Silence</p>
-        </div>
+    <h1>Art Gallery</h1>
+    <p>Experience the handcrafted essence behind every piece.</p>
+
+    <div class="collection-grid">
+      <!-- Example Art Items -->
+      <div class="collection-item">
+        <img src="images/art1.jpg" alt="Art 1">
+        <h3>Perspective No. 1</h3>
       </div>
-    </section>
+      <div class="collection-item">
+        <img src="images/art2.jpg" alt="Art 2">
+        <h3>Perspective No. 2</h3>
+      </div>
+      <div class="collection-item">
+        <img src="images/art3.jpg" alt="Art 3">
+        <h3>Found in Emptiness</h3>
+      </div>
+      <!-- Add more artworks as needed -->
+    </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
-    <p>Connect with us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+    &copy; 2025 Docotela X. All rights reserved. <br>
+    Follow us on <a href="https://instagram.com" target="_blank">Instagram</a>
   </footer>
 
-  <!-- JS for Menu -->
-  <script>
+  <!-- JavaScript for Hamburger Menu -->
+<script>
     function toggleMenu() {
       const menu = document.getElementById('sideMenu');
       menu.classList.toggle('open');
