@@ -1,75 +1,65 @@
-/* General Reset */
-* {
+/* Base Style */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
   background-color: #000;
   color: #fff;
+  font-family: 'Arial', sans-serif;
   text-align: center;
-  padding-top: 80px;
 }
 
-/* NAVBAR */
-.navbar {
+/* Navigation */
+.top-nav {
   position: fixed;
-  top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
+  top: 0;
+  padding: 14px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 999;
 }
 
-.top-links {
+.top-center-links {
   display: flex;
-  gap: 40px;
-  margin: 0 auto;
-}
-
-.top-links a {
-  color: white;
-  text-decoration: none;
+  gap: 30px;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
 }
 
-.top-links a:hover {
+.top-center-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.top-center-links a:hover {
   color: gold;
 }
 
-.menu-toggle {
-  font-size: 24px;
-  color: white;
+.hamburger {
+  font-size: 1.5rem;
   cursor: pointer;
+  color: white;
 }
 
-/* Hamburger Menu */
 .menu {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 60px;
-  right: 30px;
-  background-color: rgba(0, 0, 0, 0.95);
-  border: 1px solid #333;
-  padding: 15px;
+  right: 40px;
+  background-color: #111;
+  padding: 20px;
   border-radius: 5px;
-  flex-direction: column;
-  z-index: 999;
+  text-align: right;
 }
 
 .menu a {
+  display: block;
+  margin: 10px 0;
   color: white;
   text-decoration: none;
-  font-size: 0.95rem;
-  padding: 8px 0;
-  display: block;
-  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
 .menu a:hover {
@@ -77,22 +67,21 @@ body {
 }
 
 .menu.show {
-  display: flex;
+  display: block;
 }
 
-/* Logo & Hero */
+/* Hero Section */
+.logo-container {
+  margin-top: 120px;
+}
+
 .logo-container img {
-  width: 260px;
-  max-width: 80%;
-  margin-top: 40px;
-}
-
-.hero-text {
-  margin-top: 30px;
+  width: 300px;
+  max-width: 90%;
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
@@ -103,7 +92,7 @@ body {
 }
 
 .enter-button {
-  padding: 14px 32px;
+  padding: 14px 30px;
   font-size: 1rem;
   background-color: transparent;
   border: 2px solid white;
@@ -122,27 +111,33 @@ body {
 footer {
   margin-top: 60px;
   padding: 20px;
-  font-size: 0.95rem;
+  background-color: rgba(0, 0, 0, 0.85);
   color: #aaa;
-  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 0.95rem;
 }
 
 footer a {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 footer a:hover {
   color: gold;
 }
 
-/* Mobile Friendly */
+/* Responsive */
 @media (max-width: 768px) {
-  .top-links {
+  .top-center-links {
     display: none;
   }
 
-  .menu-toggle {
+  .hamburger {
     display: block;
+  }
+}
+
+@media (max-height: 600px) {
+  footer {
+    position: static;
   }
 }
