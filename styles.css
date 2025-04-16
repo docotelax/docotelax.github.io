@@ -1,128 +1,153 @@
-/* Base styles */
+/* General Styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: black;
-  color: white;
-  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 
-/* Navbar top links (center) */
-.top-center-links {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Navigation */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-top-links {
+  list-style: none;
   display: flex;
   gap: 40px;
-  font-size: 18px;
-  z-index: 10;
+  margin: 0;
+  padding: 0;
 }
 
-.top-center-links a {
+.nav-top-links li a {
   color: white;
+  font-size: 1.2rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.top-center-links a:hover {
+.nav-top-links li a:hover {
   color: gold;
 }
 
-/* Hamburger menu top-right */
-.hamburger {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 24px;
-  color: white;
+/* Hamburger and Dropdown Menu */
+.menu-icon {
+  font-size: 26px;
   cursor: pointer;
-  z-index: 10;
+  color: white;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   display: none;
-  flex-direction: column;
-  position: fixed;
-  top: 60px;
-  right: 30px;
-  background-color: #111;
-  padding: 20px;
-  border: 1px solid #333;
-  z-index: 9;
-  width: 200px;
-  border-radius: 4px;
+  position: absolute;
+  right: 40px;
+  top: 70px;
+  background-color: rgba(0, 0, 0, 0.95);
+  list-style: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: left;
 }
 
-.dropdown-menu a {
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu li a {
   color: white;
   text-decoration: none;
-  margin: 10px 0;
-  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu li a:hover {
   color: gold;
 }
 
-/* Gallery buttons or links at the bottom */
-a:visited, a:active {
-  color: white;
-  text-decoration: none;
+.show {
+  display: block;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+/* Logo and Hero Section */
+.logo-container {
+  margin-top: 120px;
 }
 
-/* Image styling for homepage */
-.fullscreen-image {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.logo-container img {
+  width: 300px;
+  max-width: 80%;
 }
 
-/* Button on homepage */
-.center-button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-text {
+  margin-top: 30px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Enter Button */
+.enter-button {
+  padding: 14px 30px;
+  font-size: 1rem;
   background-color: transparent;
+  border: 2px solid white;
   color: white;
-  border: 1px solid white;
-  padding: 15px 30px;
-  font-size: 16px;
-  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
   transition: all 0.3s ease;
-  z-index: 2;
 }
 
-.center-button:hover {
+.enter-button:hover {
   background-color: white;
   color: black;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .top-center-links {
-    font-size: 16px;
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #aaa;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: white !important;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-top-links {
     gap: 20px;
   }
-
-  .dropdown-menu {
-    width: 160px;
-    right: 20px;
+  .nav-top-links li a {
+    font-size: 1rem;
   }
-
-  .hamburger {
+  .dropdown-menu {
     right: 20px;
   }
 }
