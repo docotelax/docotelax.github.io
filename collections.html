@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collections - Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collections – Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <div class="collection-page">
-    <h2>Collections</h2>
+
+  <!-- Top Navbar -->
+  <div class="top-bar">
+    <div class="top-center-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- Dropdown Menu -->
+  <div class="dropdown-menu" id="dropdown">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="members.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Collections Content -->
+  <div class="collections-container">
+    <h1 class="page-title">2025 Collections</h1>
+
     <div class="collection-grid">
-      <div class="collection-card">
-        <h3>The Feeling of Freedom</h3>
-        <a href="freedom.html">View Collection</a>
+      <div class="collection-item">
+        <h2>The Feeling of Freedom</h2>
+        <p>Explore the original collection that started it all. Pure expression, no limits.</p>
       </div>
-      <div class="collection-card">
-        <h3>4 Perspectives 1 Story</h3>
-        <a href="4perspectives.html">View Collection</a>
+      <div class="collection-item">
+        <h2>4 Perspectives 1 Story</h2>
+        <p>One story told in four distinct artistic lenses. Deep, bold, layered.</p>
       </div>
-      <div class="collection-card">
-        <h3>The 8deity</h3>
-        <a href="8deity.html">View Collection</a>
+      <div class="collection-item">
+        <h2>The 8deity</h2>
+        <p>Eight exclusive pieces. Each one a divine form of freedom and art.</p>
       </div>
-      <div class="collection-card">
-        <h3>Quiet Space</h3>
-        <a href="quietspace.html">View Collection</a>
+      <div class="collection-item">
+        <h2>Quiet Space</h2>
+        <p>Minimalism meets peace. A sanctuary in fashion form.</p>
       </div>
-      <div class="collection-card">
-        <h3>Lost in the Art of Chasing Freedom</h3>
-        <a href="lost.html">View Collection</a>
+      <div class="collection-item">
+        <h2>Lost in the Art of Chasing Freedom</h2>
+        <p>The chaos of pursuit, captured in handcrafted fabric and texture.</p>
       </div>
-      <div class="collection-card">
-        <h3>Found in Emptiness</h3>
-        <a href="found.html">View Collection</a>
+      <div class="collection-item">
+        <h2>Found in Emptiness</h2>
+        <p>Raw, unfiltered pieces that celebrate nothingness and self.</p>
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>For inquiries or collaborations: 
+      <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
+    </p>
+    <p style="margin-top: 6px;">
+      Follow us on Instagram: 
+      <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("open");
+    }
+  </script>
+
 </body>
 </html>
