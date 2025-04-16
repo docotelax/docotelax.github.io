@@ -2,64 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Members Only - Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Members Only – Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      if (password === 'memberson1y') {
+        document.getElementById('members-content').style.display = 'block';
+        document.getElementById('password-form').style.display = 'none';
+      } else {
+        alert('Incorrect password.');
+      }
+    }
+  </script>
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-center">
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-links-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+    <div id="menu" class="dropdown-menu">
       <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="nav-right">
-      <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- Password Form -->
+  <main class="main-container">
+    <div id="password-form">
+      <h1 class="page-title">Members Only</h1>
+      <p>Enter the password to access exclusive content:</p>
+      <input type="password" id="password" placeholder="Enter password" />
+      <button onclick="checkPassword()">Submit</button>
     </div>
-  </nav>
 
-  <div class="dropdown-menu" id="dropdownMenu">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="membersonly.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <!-- Protected Content -->
+    <div id="members-content" style="display:none;">
+      <h2>Welcome to the Private Side of Docotela X</h2>
+      <p>This section includes unreleased work, private collections, and artist features.</p>
+      <p>Only for true supporters of the vision.</p>
+    </div>
+  </main>
 
-  <!-- Members Login Section -->
-  <div class="page-content" style="margin-top: 120px; padding: 0 20px;">
-    <h1>Members Only Access</h1>
-    <p>This section is password protected. Please enter the password to continue.</p>
-    <input type="password" id="passwordInput" placeholder="Enter password" style="padding:10px; border-radius:5px; border:none;"/>
-    <br>
-    <button onclick="checkPassword()" class="enter-button" style="margin-top:15px;">Enter</button>
-    <div id="error-message" style="color: red; margin-top: 10px;"></div>
-  </div>
-
-  <!-- Footer -->
   <footer>
-    <p>For inquiries or collaborations:
+    <p>
+      For inquiries or collaborations:
       <a href="mailto:docotelaxofficial@gmail.com">docotelaxofficial@gmail.com</a>
     </p>
-    <p>Follow us on Instagram:
+    <p>
+      Follow us on Instagram:
       <a href="https://instagram.com/docotela_x" target="_blank">@docotela_x</a>
     </p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("dropdownMenu");
-      menu.classList.toggle("open");
-    }
-    function checkPassword() {
-      const password = document.getElementById("passwordInput").value;
-      if (password === "memberson1y") {
-        window.location.href = "private.html";
-      } else {
-        document.getElementById("error-message").textContent = "Incorrect password.";
-      }
+      var menu = document.getElementById('menu');
+      menu.classList.toggle('show');
     }
   </script>
 </body>
