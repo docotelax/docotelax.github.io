@@ -1,76 +1,86 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
   background-color: #000;
   color: #fff;
+  font-family: 'Arial', sans-serif;
   text-align: center;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: gold;
-}
-
+/* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 12px 40px;
-  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 999;
 }
 
 .nav-center {
   display: flex;
-  gap: 40px;
-  font-size: 1.2rem;
-  justify-content: center;
-  flex: 1;
+  gap: 30px;
 }
 
-.nav-right {
-  position: absolute;
-  right: 40px;
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: gold;
+}
+
+.nav-right .hamburger {
   font-size: 1.5rem;
   cursor: pointer;
+  color: white;
 }
 
+/* Hamburger Dropdown */
 .menu-overlay {
-  display: none;
   position: fixed;
   top: 60px;
   right: 0;
-  width: 250px;
+  width: 200px;
   background-color: rgba(0, 0, 0, 0.95);
-  z-index: 999;
   padding: 20px;
-  text-align: left;
+  display: none;
+  z-index: 998;
 }
 
 .menu-overlay ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.menu-overlay li {
-  margin: 15px 0;
+.menu-overlay ul li {
+  margin-bottom: 15px;
+}
+
+.menu-overlay ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.menu-overlay ul li a:hover {
+  color: gold;
 }
 
 .menu-overlay.show {
   display: block;
 }
 
+/* Logo and Hero */
 .logo-container {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .logo-container img {
@@ -99,6 +109,7 @@ a:hover {
   background-color: transparent;
   border: 2px solid white;
   color: white;
+  text-decoration: none;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -108,10 +119,11 @@ a:hover {
   color: black;
 }
 
+/* Footer */
 footer {
-  margin-top: 80px;
+  margin-top: 60px;
   padding: 30px 20px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: #000;
   color: #aaa;
   font-size: 0.95rem;
 }
@@ -121,22 +133,22 @@ footer a {
   text-decoration: underline;
 }
 
+footer a:hover {
+  color: gold;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .nav-center {
-    font-size: 1rem;
-    gap: 20px;
+    display: none;
   }
 
-  .nav-right {
-    right: 20px;
+  .menu-overlay {
+    width: 100%;
+    right: 0;
   }
 
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .enter-button {
-    font-size: 0.9rem;
-    padding: 12px 24px;
+  .logo-container {
+    margin-top: 100px;
   }
 }
