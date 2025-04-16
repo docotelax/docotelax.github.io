@@ -411,6 +411,36 @@ footer a:hover {
   height: auto;
   border-radius: 5px;
 }
+.collection-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 160px 40px 80px;
+}
+
+.collection-card {
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.collection-card h2 {
+  color: gold;
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+.collection-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
 
 .art-piece h3 {
   margin-top: 15px;
