@@ -2,73 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art Gallery – Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docotela X | Art Gallery</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="top-nav">
-      <div class="nav-center">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <div id="menu" class="dropdown-menu">
-        <a href="index.html">Home</a>
-        <a href="collections.html">Collections</a>
-        <a href="members.html">Members Only</a>
-        <a href="gallery.html">Art Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </header>
+  <!-- Top Center Navigation -->
+  <div class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-  <main class="gallery-main">
-    <h1 class="page-title">Art Gallery</h1>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/perspective1.jpg" alt="Perspective 1" onclick="openFullscreen(this)">
-        <p>Perspective 1</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/perspective2.jpg" alt="Perspective 2" onclick="openFullscreen(this)">
-        <p>Perspective 2</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/found.jpg" alt="Found in Emptiness" onclick="openFullscreen(this)">
-        <p>Found in Emptiness</p>
-      </div>
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="members.html">Members Only</a>
+    <a href="gallery.html">Art Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="page-title">
+    <h1>Art Gallery</h1>
+  </div>
+
+  <div class="gallery-container">
+    <div class="art-piece">
+      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/400x400?text=Perspective+1" alt="Perspective 1" />
+      </a>
+      <p>Perspective 1</p>
     </div>
 
-    <!-- Fullscreen Modal -->
-    <div id="fullscreenModal" class="fullscreen-modal" onclick="closeFullscreen()">
-      <span class="close-btn" onclick="closeFullscreen()">×</span>
-      <img class="fullscreen-image" id="fullscreenImage">
+    <div class="art-piece">
+      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/400x400?text=Perspective+2" alt="Perspective 2" />
+      </a>
+      <p>Perspective 2</p>
     </div>
-  </main>
 
-  <footer class="footer">
-    <p>© 2025 Docotela X. All rights reserved.</p>
+    <div class="art-piece">
+      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/400x400?text=Found+in+Emptiness" alt="Found in Emptiness" />
+      </a>
+      <p>Found in Emptiness</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      var menu = document.getElementById("menu");
-      menu.classList.toggle("show");
-    }
-
-    function openFullscreen(imgElement) {
-      const modal = document.getElementById("fullscreenModal");
-      const fullscreenImg = document.getElementById("fullscreenImage");
-      fullscreenImg.src = imgElement.src;
-      modal.style.display = "flex";
-    }
-
-    function closeFullscreen() {
-      document.getElementById("fullscreenModal").style.display = "none";
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("open");
     }
   </script>
 </body>
