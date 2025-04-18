@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – Docotela X</title>
+  <title>Members Only | Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Top Center Navigation -->
-  <div class="top-center-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+  <div class="top-nav">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="top-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 
-  <!-- Hamburger Menu -->
-  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  <div id="menu" class="menu">
+  <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -26,42 +25,39 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- About Section -->
-  <section class="about-section">
-    <h1>Our Story</h1>
-    <p>
-      Docotela X was born from a desire to craft fashion that speaks to freedom, identity, and expression.
-      From handbuilt classics like a 1978 VW Beetle to the creation of art-infused garments, every thread and every detail has a purpose.
-      The vision was never just about clothing — it was about a feeling. A movement. A truth.
-    </p>
+  <div class="main-container">
+    <h1>Members Only Access</h1>
+    <form id="password-form">
+      <input type="password" id="password" placeholder="Enter Password" />
+      <button type="submit">Enter</button>
+    </form>
 
-    <h2>Timeline of Moments</h2>
-    <ul class="timeline">
-      <li><strong>2019:</strong> The Beetle project begins – a black shell turned dream machine.</li>
-      <li><strong>2021:</strong> Countless design drafts, failures, and breakthroughs spark inspiration.</li>
-      <li><strong>2023:</strong> The concept of freedom finds form in art and fashion.</li>
-      <li><strong>2025:</strong> Docotela X is launched – exclusive, handcrafted, and story-driven.</li>
-    </ul>
-
-    <!-- Manifesto Button -->
-    <div class="manifesto-section">
-      <a href="#" class="manifesto-button">Download Manifesto (Coming Soon)</a>
+    <div id="members-content" style="display: none;">
+      <h2>Welcome, Member</h2>
+      <p>This area is exclusive. Here’s a temporary placeholder until your private content is ready.</p>
+      <a href="#" class="enter-button">Download Private Manifesto (Coming Soon)</a>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
-    <p><a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved. <a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
   </footer>
 
-  <!-- JavaScript for Menu -->
   <script>
     function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      document.getElementById('sideMenu').classList.toggle('open');
     }
-  </script>
 
+    document.getElementById('password-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const password = document.getElementById('password').value;
+      if (password === 'memberson1y') {
+        document.getElementById('members-content').style.display = 'block';
+        document.getElementById('password-form').style.display = 'none';
+      } else {
+        alert('Incorrect password. Try again.');
+      }
+    });
+  </script>
 </body>
 </html>
