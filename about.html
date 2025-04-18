@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Docotela X</title>
+  <title>About – Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="top-nav">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="top-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
+
+  <!-- Top Center Navigation -->
+  <div class="top-center-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <div class="side-menu" id="sideMenu">
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <div id="menu" class="menu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -25,51 +26,42 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <main class="about-section">
-    <h1 class="fade-in">The Story Behind Docotela X</h1>
-    <p class="fade-in delay-1">"Born from struggle. Inspired by freedom. Built to last."</p>
-    <img src="https://images.unsplash.com/photo-1558980664-10ea74f9e273?auto=format&fit=crop&w=1050&q=80" alt="Docotela X Philosophy" class="about-image fade-in delay-2"/>
+  <!-- About Section -->
+  <section class="about-section">
+    <h1>Our Story</h1>
+    <p>
+      Docotela X was born from a desire to craft fashion that speaks to freedom, identity, and expression.
+      From handbuilt classics like a 1978 VW Beetle to the creation of art-infused garments, every thread and every detail has a purpose.
+      The vision was never just about clothing — it was about a feeling. A movement. A truth.
+    </p>
 
-    <section class="about-content fade-in delay-3">
-      <p>
-        Docotela X was born from the idea that true freedom comes from creating without compromise.
-        Our founder spent years crafting a custom 1978 VW Beetle, building every inch from a bare shell —
-        proving consistency, patience, and vision. That same energy now drives every collection we release.
-      </p>
-    </section>
+    <h2>Timeline of Moments</h2>
+    <ul class="timeline">
+      <li><strong>2019:</strong> The Beetle project begins – a black shell turned dream machine.</li>
+      <li><strong>2021:</strong> Countless design drafts, failures, and breakthroughs spark inspiration.</li>
+      <li><strong>2023:</strong> The concept of freedom finds form in art and fashion.</li>
+      <li><strong>2025:</strong> Docotela X is launched – exclusive, handcrafted, and story-driven.</li>
+    </ul>
 
-    <section class="timeline-section fade-in delay-4">
-      <h2>Our Journey</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-date">2019</span>
-          <p>Docotela X was just an idea scribbled in a notebook.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2021</span>
-          <p>The Beetle build begins — a symbol of resilience and vision.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2023</span>
-          <p>“Freedom as a Feeling” is born. Design takes a new direction.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2025</span>
-          <p>Launch of Docotela X. Limited collections meet pure storytelling.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Manifesto Button -->
+    <div class="manifesto-section">
+      <a href="#" class="manifesto-button">Download Manifesto (Coming Soon)</a>
+    </div>
+  </section>
 
-  <footer>
-    <p>Contact us via <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+    <p><a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
   </footer>
 
+  <!-- JavaScript for Menu -->
   <script>
     function toggleMenu() {
-      const sideMenu = document.getElementById('sideMenu');
-      sideMenu.classList.toggle('open');
+      var menu = document.getElementById('menu');
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     }
   </script>
+
 </body>
 </html>
