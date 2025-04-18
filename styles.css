@@ -880,3 +880,31 @@ footer a:hover {
   cursor: pointer;
   z-index: 1000;
 }
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.art-piece {
+  text-align: center;
+  color: gold;
+  background-color: #111;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.art-piece:hover {
+  transform: scale(1.03);
+}
+
+.art-piece img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
