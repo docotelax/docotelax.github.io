@@ -967,3 +967,77 @@ footer a:hover {
 .dropdown-menu a:visited {
   color: white;
 }
+/* -----------------------------
+   LUXURY STYLING & INTERACTIONS
+------------------------------*/
+
+/* 1. Fix link color and hover glow */
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+a:hover {
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+
+/* 2. Font and text appearance upgrade */
+body, html {
+  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  color: white;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 3. Buttons & hover glow */
+button, .button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid gold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover, .button:hover {
+  background-color: gold;
+  color: black;
+  box-shadow: 0 0 10px gold;
+}
+
+/* 4. Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gold;
+  border-radius: 6px;
+}
+
+/* 5. Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* 6. Optional: Subtle fade-in animation for page load */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
