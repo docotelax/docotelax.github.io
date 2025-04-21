@@ -4,59 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About - Docotela X</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Top Navigation -->
-  <div class="top-nav">
-    <div class="nav-center">
+  <header class="main-header">
+    <div class="logo">DOCOTELA X</div>
+    <nav class="top-nav">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
-    </div>
+    </nav>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </div>
-
-  <!-- Fullscreen Menu -->
-  <div id="menu" class="fullscreen-menu">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- About Content -->
-  <main class="about-section">
-    <h1>Members Only Access</h1>
-    <p>Welcome to the exclusive members-only section of Docotela X.</p>
-    <p>Here, you'll soon find the <strong>Private Manifesto</strong> and other exclusive downloads reserved for our trusted collectors and believers.</p>
-
-    <div class="coming-soon-box">
-      <p><em>Exclusive Manifesto PDF Coming Soon.</em></p>
-      <a href="#" class="disabled-button" onclick="return false;">Download Manifesto (Coming Soon)</a>
+    <div id="menu" class="dropdown-menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </header>
 
-    <section class="extras">
-      <h3>What to Expect:</h3>
-      <ul>
-        <li>Private video interviews with featured artists</li>
-        <li>First access to upcoming pieces</li>
-        <li>Behind-the-scenes creation stories</li>
-      </ul>
+  <main class="about-page content-fade">
+    <section class="about-section">
+      <h1 class="page-title">About the Brand</h1>
+      <p>
+        <strong>Docotela X</strong> is not just a clothing label — it's an immersive journey through freedom, art, and individuality.
+        Each piece is handcrafted as a symbol of liberation from convention, telling stories through texture, form, and raw creativity.
+      </p>
+      <p>
+        Founded on the philosophy that <em>freedom is the highest form of luxury</em>, Docotela X is a statement for those who dare to live artfully, unapologetically, and with intent.
+        Every collection is limited — not for exclusivity's sake, but to preserve the emotional intimacy between the artist and the wearer.
+      </p>
+      <p>
+        The vision is bold: to redefine fashion as experience, to blur the lines between gallery and wardrobe, and to champion creators whose work speaks louder than trends.
+      </p>
+      <p>
+        Docotela X was born in Johannesburg, but its language is global — rooted in struggle, rebirth, self-expression, and the relentless pursuit of authenticity.
+      </p>
+    </section>
+
+    <section class="download-section">
+      <h2>Brand Manifesto Coming Soon</h2>
+      <p>A downloadable PDF with the full Docotela X story and philosophy will be available here soon.</p>
+      <a href="#" class="button disabled">Download Manifesto (Coming Soon)</a>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+  <footer class="main-footer">
+    <p>© 2025 Docotela X. All rights reserved.</p>
+    <p><a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
   </footer>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.classList.toggle("show");
     }
   </script>
 </body>
