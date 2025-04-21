@@ -1287,3 +1287,52 @@ button:hover, .button:hover {
 .art-piece:hover .hover-label {
   opacity: 1;
 }
+.members-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.members-subtext {
+  color: white;
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+
+.members-box {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.members-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #e6b800;
+}
+
+.download-btn.disabled {
+  background-color: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
