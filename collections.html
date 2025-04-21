@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collections - Docotela X</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="fade-in">
+
+  <!-- Top Center Navigation -->
   <div class="top-nav">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="top-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <div class="side-menu" id="sideMenu">
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="menu" id="menu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -25,46 +26,54 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <div class="main-container">
-    <h1>Our Exclusive Collections</h1>
+  <!-- Collections Title -->
+  <h1 class="page-title">Docotela X Collections</h1>
 
-    <div class="collection-showcase">
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=Feeling+of+Freedom" alt="The Feeling of Freedom">
-        <h3>The Feeling of Freedom</h3>
-      </div>
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=4+Perspectives+1+Story" alt="4 Perspectives 1 Story">
-        <h3>4 Perspectives 1 Story</h3>
-      </div>
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=The+8deity" alt="The 8deity">
-        <h3>The 8deity</h3>
-      </div>
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=Quiet+Space" alt="Quiet Space">
-        <h3>Quiet Space</h3>
-      </div>
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=Lost+in+the+Art+of+Chasing+Freedom" alt="Lost in the Art of Chasing Freedom">
-        <h3>Lost in the Art of Chasing Freedom</h3>
-      </div>
-      <div class="collection-card">
-        <img src="https://via.placeholder.com/300x400?text=Found+in+Emptiness" alt="Found in Emptiness">
-        <h3>Found in Emptiness</h3>
-      </div>
+  <!-- Collections Grid -->
+  <div class="art-grid">
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="The Feeling of Freedom">
+      </a>
+      <p>The Feeling of Freedom</p>
+    </div>
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="4 Perspectives 1 Story">
+      </a>
+      <p>4 Perspectives 1 Story</p>
+    </div>
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="The 8deity">
+      </a>
+      <p>The 8deity</p>
+    </div>
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="Quiet Space">
+      </a>
+      <p>Quiet Space</p>
+    </div>
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="Lost in the Art of Chasing Freedom">
+      </a>
+      <p>Lost in the Art of Chasing Freedom</p>
+    </div>
+    <div class="art-card">
+      <a href="https://via.placeholder.com/600" target="_blank" title="Click to view full screen">
+        <img src="https://via.placeholder.com/300x300" alt="Found in Emptiness">
+      </a>
+      <p>Found in Emptiness</p>
     </div>
   </div>
 
-  <footer>
-    <p>Contact us via <a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
-  </footer>
-
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("sideMenu");
-      menu.classList.toggle("open");
+      document.getElementById('menu').classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
