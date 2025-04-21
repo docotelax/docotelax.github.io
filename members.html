@@ -8,68 +8,53 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <div class="top-nav">
-    <div class="top-links">
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-center">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </div>
-
-  <!-- Side Menu -->
-  <div class="side-menu" id="sideMenu">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+    <div class="menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
 
   <!-- Members Only Section -->
-  <div class="main-container">
-    <h1>Members Only</h1>
-    <p>Enter your exclusive pass to unlock private content.</p>
-    <form id="password-form" onsubmit="checkPassword(event)">
-      <input type="password" id="password" placeholder="Enter Password" required />
-      <button type="submit">Unlock</button>
-    </form>
+  <section class="members-section fade-in">
+    <div class="container">
+      <h1 class="section-title">Exclusive Access – Members Only</h1>
+      <p class="subtitle">This space is reserved for those who understand the art behind the brand.</p>
 
-<div id="members-content" style="display:none;">
-  <h2>Welcome to the Inner Circle</h2>
-  <p>You've unlocked access to the exclusive Docotela X vault. This space is reserved for the curious minds, the art lovers, and those who wear freedom with intention.</p>
+      <div class="members-card">
+        <p>Enter password to unlock exclusive content:</p>
+        <input type="password" placeholder="Enter password" disabled />
+        <button disabled>Submit</button>
 
-  <div class="exclusive-content">
-    <img src="https://via.placeholder.com/600x400?text=Exclusive+Art+Piece" alt="Exclusive Art Piece">
-    <h3>‘Veins of Freedom’ – Limited Preview</h3>
-    <p>This piece expresses the inner chaos and quiet confidence of breaking away from societal timelines. One of one. Never recreated.</p>
+        <p class="note">Note: Full access feature coming soon.</p>
 
-    <a href="#" class="exclusive-button">Download Manifesto (Coming Soon)</a>
-    <a href="#" class="exclusive-button">Access Early Drop</a>
-  </div>
-</div>
-  <footer>
-    &copy; 2025 Docotela X. All rights reserved. |
-    <a href="https://instagram.com/docotelax" target="_blank">Instagram</a>
+        <div class="exclusive-preview">
+          <h3>Early Preview: Limited Art Drop</h3>
+          <img src="https://via.placeholder.com/600x400" alt="Exclusive Preview"/>
+          <p>Stay tuned. Members will be the first to experience it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("sideMenu");
-      menu.classList.toggle("open");
-    }
-
-    function checkPassword(event) {
-      event.preventDefault();
-      const input = document.getElementById("password").value;
-      if (input === "memberson1y") {
-        document.getElementById("password-form").style.display = "none";
-        document.getElementById("members-content").style.display = "block";
-      } else {
-        alert("Incorrect password. Please try again.");
-      }
+      document.getElementById("mobileMenu").classList.toggle("open");
     }
   </script>
 </body>
