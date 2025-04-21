@@ -3,63 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docotela X | Art Gallery</title>
+  <title>Gallery - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Center Navigation -->
-  <div class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- Hamburger Menu -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="menu" id="menu">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <div class="page-title">
-    <h1>Art Gallery</h1>
-  </div>
-
-  <div class="gallery-container">
-    <div class="art-piece">
-      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
-        <img src="https://via.placeholder.com/400x400?text=Perspective+1" alt="Perspective 1" />
-      </a>
-      <p>Perspective 1</p>
+  <!-- Top Navigation -->
+  <header>
+    <div class="logo">Docotela X</div>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </header>
 
-    <div class="art-piece">
-      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
-        <img src="https://via.placeholder.com/400x400?text=Perspective+2" alt="Perspective 2" />
-      </a>
-      <p>Perspective 2</p>
+  <!-- Page Title -->
+  <section class="page-intro">
+    <h1 class="fade-in">Art Gallery</h1>
+    <p class="fade-in">Browse the curated artworks tied to the spirit of Docotela X.</p>
+  </section>
+
+  <!-- Art Gallery Grid -->
+  <section class="art-grid fade-in">
+    <div class="art-card">
+      <img src="https://via.placeholder.com/600x800" alt="Perspective 1" />
+      <div class="art-title">Perspective 1</div>
     </div>
-
-    <div class="art-piece">
-      <a href="https://via.placeholder.com/800" target="_blank" title="Click to view full screen">
-        <img src="https://via.placeholder.com/400x400?text=Found+in+Emptiness" alt="Found in Emptiness" />
-      </a>
-      <p>Found in Emptiness</p>
+    <div class="art-card">
+      <img src="https://via.placeholder.com/600x800" alt="Perspective 2" />
+      <div class="art-title">Perspective 2</div>
     </div>
-  </div>
+    <div class="art-card">
+      <img src="https://via.placeholder.com/600x800" alt="Found in Emptiness" />
+      <div class="art-title">Found in Emptiness</div>
+    </div>
+    <div class="art-card">
+      <img src="https://via.placeholder.com/600x800" alt="The Feeling of Freedom" />
+      <div class="art-title">The Feeling of Freedom</div>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
+  <!-- JS for menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("open");
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
     }
   </script>
 </body>
