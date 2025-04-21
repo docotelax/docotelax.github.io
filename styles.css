@@ -1234,3 +1234,56 @@ button:hover, .button:hover {
   border-radius: 6px;
   margin-bottom: 15px;
 }
+.gallery-title {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 2em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.art-piece {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.art-piece img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.art-piece:hover img {
+  transform: scale(1.05);
+}
+
+.hover-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: gold;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.art-piece:hover .hover-label {
+  opacity: 1;
+}
