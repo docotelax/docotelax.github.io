@@ -908,3 +908,46 @@ footer a:hover {
   border-radius: 8px;
   cursor: pointer;
 }
+.about-section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.coming-soon-box {
+  margin: 30px auto;
+  background: #111;
+  border: 1px solid gold;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.disabled-button {
+  display: inline-block;
+  background: grey;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: not-allowed;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.extras {
+  margin-top: 50px;
+  text-align: left;
+  color: #ccc;
+}
+
+.extras ul {
+  list-style: square;
+  margin-left: 30px;
+}
+
+.extras h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
