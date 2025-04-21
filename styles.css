@@ -951,3 +951,19 @@ footer a:hover {
   color: gold;
   margin-bottom: 10px;
 }
+/* Fix top nav link colors */
+.top-nav a,
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-nav a:hover,
+.dropdown-menu a:hover {
+  color: gold;
+}
+
+.top-nav a:visited,
+.dropdown-menu a:visited {
+  color: white;
+}
