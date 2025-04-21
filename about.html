@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Members Only | Docotela X</title>
+  <title>About - Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Top Navigation -->
   <div class="top-nav">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <div class="top-links">
+    <div class="nav-center">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
-  <div class="side-menu" id="sideMenu">
+  <!-- Fullscreen Menu -->
+  <div id="menu" class="fullscreen-menu">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
     <a href="members.html">Members Only</a>
@@ -25,39 +27,37 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <div class="main-container">
+  <!-- About Content -->
+  <main class="about-section">
     <h1>Members Only Access</h1>
-    <form id="password-form">
-      <input type="password" id="password" placeholder="Enter Password" />
-      <button type="submit">Enter</button>
-    </form>
+    <p>Welcome to the exclusive members-only section of Docotela X.</p>
+    <p>Here, you'll soon find the <strong>Private Manifesto</strong> and other exclusive downloads reserved for our trusted collectors and believers.</p>
 
-    <div id="members-content" style="display: none;">
-      <h2>Welcome, Member</h2>
-      <p>This area is exclusive. Here’s a temporary placeholder until your private content is ready.</p>
-      <a href="#" class="enter-button">Download Private Manifesto (Coming Soon)</a>
+    <div class="coming-soon-box">
+      <p><em>Exclusive Manifesto PDF Coming Soon.</em></p>
+      <a href="#" class="disabled-button" onclick="return false;">Download Manifesto (Coming Soon)</a>
     </div>
-  </div>
 
+    <section class="extras">
+      <h3>What to Expect:</h3>
+      <ul>
+        <li>Private video interviews with featured artists</li>
+        <li>First access to upcoming pieces</li>
+        <li>Behind-the-scenes creation stories</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved. <a href="https://instagram.com/docotelax" target="_blank">Instagram</a></p>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('sideMenu').classList.toggle('open');
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
-
-    document.getElementById('password-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const password = document.getElementById('password').value;
-      if (password === 'memberson1y') {
-        document.getElementById('members-content').style.display = 'block';
-        document.getElementById('password-form').style.display = 'none';
-      } else {
-        alert('Incorrect password. Try again.');
-      }
-    });
   </script>
 </body>
 </html>
