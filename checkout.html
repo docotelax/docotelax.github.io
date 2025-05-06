@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout – Docotela X</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <style>
+    .checkout-container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .checkout-container h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .checkout-container input, .checkout-container button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .checkout-container input {
+      background: #222;
+      color: white;
+    }
+
+    .checkout-container button {
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #333;
+      padding: 10px 0;
+    }
+
+    .total {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+
+    <div id="cartItems"></div>
+    <div class="total" id="cartTotal">Total: R0</div>
+
+    <input type="email" id="email" placeholder="Enter your email" required />
+
+    <button onclick="payWithPaystack()">Pay Now</button>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function renderCartItems() {
+      const cartContainer = document.getElementById('cartItems');
+      const cartTotal = document.getElementById('cartTotal');
+      cartContainer.innerHTML = '';
+
+      let total = 0;
+
+      cart.forEach(item => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `<span>${item.name}</span><span>R${item.price}</span>`;
+        cartContainer.appendChild(div);
+      });
+
+      cartTotal.textContent = `Total: R${total}`;
+    }
+
+    renderCartItems();
+
+    function payWithPaystack() {
+      let email = document.getElementById("email").value;
+      let amount = cart.reduce((sum, item) => sum + item.price, 0) * 100;
+
+      if (!email || amount === 0) {
+        alert("Please enter your email and make sure your cart is not empty.");
+        return;
+      }
+
+      let handler = PaystackPop.setup({
+        key: 'your_public_key_here',
+        email: email,
+        amount: amount,
+        currency: 'ZAR',
+        callback: function(response) {
+          alert('Payment successful! Reference: ' + response.reference);
+          localStorage.removeItem('cart');
+          window.location.href = '/';
+        },
+        onClose: function() {
+          alert('Payment window closed.');
+        }
+      });
+
+      handler.openIframe();
+    }
+  </script>
+</body>
+</html>
