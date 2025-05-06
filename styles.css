@@ -1494,3 +1494,51 @@ button:hover, .button:hover {
 .fade-in {
   animation: fadeIn 1.5s ease forwards;
 }
+/* Cart Icon */
+#cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Cart Box */
+#cart-container {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Cart Items */
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin: 10px 0;
+}
+
+#cart-items button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
