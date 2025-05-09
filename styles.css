@@ -2312,3 +2312,20 @@ footer {
     font-size: 1rem;
   }
 }
+/* Ensure the hero image is behind other elements */
+.cover-image {
+  position: relative;
+  z-index: 1;
+}
+
+/* Position the hamburger menu above the hero image */
+.hamburger {
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Position the mobile navigation menu above the hero image */
+.mobile-nav {
+  position: absolute;
+  z-index: 999;
+}
