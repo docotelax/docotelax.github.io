@@ -8,45 +8,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Navigation -->
   <header>
-    <nav class="top-nav">
-      <div class="nav-center-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-      <div id="dropdown-menu" class="dropdown-content">
-        <a href="index.html">Home</a>
-        <a href="collections.html">Collections</a>
-        <a href="members.html">Members Only</a>
-        <a href="gallery.html">Art Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <nav>
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
+
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="shop.html">Shop</a>
+    </div>
   </header>
 
-  <main class="homepage">
-    <div class="cover-container">
-      <img src="images/home-cover.jpg" alt="Docotela X Cover" class="cover-image">
-      <div class="intro-text">
-        <h1>DOCOTELA X</h1>
-        <p>The Feeling of Freedom</p>
-        <a href="collections.html" class="enter-button">Enter the Gallery</a>
-      </div>
-    </div>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="cover.png" alt="Docotela X Cover" class="cover-image" />
+    <h1>Docotela X</h1>
+    <p>Experience the feeling of freedom. Limited collections. Handcrafted art.</p>
+    <a href="collections.html" class="button">Enter the Gallery</a>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>Contact: info@docotelax.com</p>
-    <p>Instagram: <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
+    <p>Contact: docotelax@gmail.com | Instagram: @docotela.x</p>
   </footer>
 
+  <!-- JavaScript for Mobile Menu -->
   <script>
-    function toggleMenu() {
-      document.getElementById('dropdown-menu').classList.toggle('show');
-    }
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav");
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("active");
+    });
   </script>
 </body>
 </html>
+
