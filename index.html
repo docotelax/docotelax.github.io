@@ -2,55 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOCOTELA X – Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Top Center Navigation -->
-  <header class="top-center-nav fade-in">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a> -</li>
-        <li><a href="about.html">About</a> -</li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header>
+    <nav class="top-nav">
+      <div class="nav-center-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+      <div id="dropdown-menu" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="collections.html">Collections</a>
+        <a href="members.html">Members Only</a>
+        <a href="gallery.html">Art Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
-  <!-- Hamburger Menu -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="menu" id="menu">
-    <a href="index.html">Home</a>
-    <a href="collections.html">Collections</a>
-    <a href="members.html">Members Only</a>
-    <a href="gallery.html">Art Gallery</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <main class="homepage">
+    <div class="cover-container">
+      <img src="images/home-cover.jpg" alt="Docotela X Cover" class="cover-image">
+      <div class="intro-text">
+        <h1>DOCOTELA X</h1>
+        <p>The Feeling of Freedom</p>
+        <a href="collections.html" class="enter-button">Enter the Gallery</a>
+      </div>
+    </div>
+  </main>
 
-  <!-- Hero Section -->
-  <section class="hero fade-in">
-    <h2>Cinematic Intro</h2>
-    <h1>DOCOTELA X</h1>
-    <p>The Feeling of Freedom</p>
-
-    <!-- Cinematic Image -->
-    <img src="49788253-137B-4BA9-84A4-89750DAC224F.jpeg" alt="Cinematic Art" class="cinematic-image" />
-
-    <a href="gallery.html" class="enter-button">view collections</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="fade-in">
-    <p>&copy; 2025 Docotela X. Designed with purpose.</p>
+  <footer>
+    <p>Contact: info@docotelax.com</p>
+    <p>Instagram: <a href="https://instagram.com/docotelax" target="_blank">@docotelax</a></p>
   </footer>
 
   <script>
     function toggleMenu() {
-      var menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      document.getElementById('dropdown-menu').classList.toggle('show');
     }
   </script>
 </body>
