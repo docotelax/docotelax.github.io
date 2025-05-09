@@ -2154,3 +2154,161 @@ footer {
     display: flex;
   }
 }
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Unbounded', sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+nav {
+  background-color: #0f0f0f;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+nav ul.desktop-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d4af37;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #0f0f0f;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-nav a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #333;
+}
+
+.mobile-nav a:hover {
+  background-color: #1a1a1a;
+  color: #d4af37;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: #d4af37;
+  color: #000;
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #0f0f0f;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul.desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
