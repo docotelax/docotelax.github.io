@@ -1852,3 +1852,170 @@ a {
 a:hover {
   color: gold;
 }
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: gold;
+}
+
+/* Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+}
+
+.nav-center-links {
+  display: flex;
+  gap: 40px;
+  font-size: 1.2rem;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background-color: #111;
+  border: 1px solid #333;
+  z-index: 99;
+  padding: 10px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+}
+
+/* Homepage */
+.cover-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.enter-button {
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 1px solid gold;
+  color: gold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+.enter-button:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Collections Grid */
+.collections-page {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.collection-box {
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: #111;
+  transition: transform 0.3s ease;
+}
+.collection-box:hover {
+  transform: scale(1.03);
+}
+.collection-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #111;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: gold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-center-links {
+    display: none;
+  }
+  .dropdown-content {
+    right: 10px;
+  }
+  .cover-image {
+    object-position: center;
+  }
+}
