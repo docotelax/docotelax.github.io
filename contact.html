@@ -3,49 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Docotela X</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <title>Contact – DOCOTELA X</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-top-center">
-      <a href="index.html">Home</a> -
-      <a href="about.html">About</a> -
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="members.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <!-- Top Nav & Hamburger Menu -->
 
   <main>
-    <section class="fade-in contact-section">
-      <h1 class="gallery-title">Get in Touch</h1>
-      <p class="contact-intro">Whether you’re an artist, supporter, or just curious — we’d love to hear from you.</p>
-
-      <form class="contact-form" id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="_replyto" required></label>
+      <label>Message:<textarea name="message" required></textarea></label>
+      <button type="submit">Send</button>
+    </form>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('hidden');
-    }
-  </script>
+  <footer>...same footer...</footer>
 </body>
 </html>
+
