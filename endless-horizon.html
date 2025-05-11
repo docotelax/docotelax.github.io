@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Endless Horizon – Docotela X</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="main-nav">
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="members.html">Members Only</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- Collection Title -->
+  <main class="product-page">
+    <h1 class="page-title">Endless Horizon Collection</h1>
+
+    <section class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="images/horizon-piece1.jpg" alt="Horizon Jacket">
+        <h2>Horizon Jacket</h2>
+        <p class="price">R2,499</p>
+        <form>
+          <label>Size:
+            <select>
+              <option>Select Size</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </label>
+
+          <label>Color:
+            <select>
+              <option>Select Color</option>
+              <option>Black</option>
+              <option>Sand</option>
+            </select>
+          </label>
+
+          <button type="submit" class="add-to-cart">Add to Cart</button>
+        </form>
+      </div>
+
+      <!-- Add more products below this line -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+  }
+  </script>
+
+</body>
+</html>
