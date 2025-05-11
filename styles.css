@@ -2329,3 +2329,92 @@ footer {
   position: absolute;
   z-index: 999;
 }
+body.dark-theme {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 1em;
+  position: relative;
+  z-index: 1000;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.nav-center a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: gold;
+}
+
+.hamburger {
+  font-size: 1.8em;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+}
+
+.mobile-nav {
+  background-color: #111;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 999;
+}
+
+.mobile-nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  color: gold;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-content {
+  padding: 3em 1.5em;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section h1,
+.about-section h2 {
+  color: gold;
+  margin-top: 1em;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5em;
+  color: #777;
+  font-size: 0.9em;
+}
