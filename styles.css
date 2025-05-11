@@ -2418,3 +2418,31 @@ body.dark-theme {
   color: #777;
   font-size: 0.9em;
 }
+.members-section input[type="password"] {
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 1em;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+.members-section button {
+  padding: 10px 20px;
+  margin-top: 1em;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.members-section button:hover {
+  background-color: #d4af37;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1em;
+}
