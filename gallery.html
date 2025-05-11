@@ -4,53 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Art Gallery | Docotela X</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
-    <div class="nav-top-center">
-      <a href="index.html">Home</a> -
-      <a href="about.html">About</a> -
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav id="menu" class="hidden">
+<body class="dark-theme">
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="top-nav">
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-nav hidden">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
+      <a href="gallery.html" class="active">Art Gallery</a>
       <a href="members.html">Members Only</a>
-      <a href="gallery.html">Art Gallery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="fade-in gallery-section">
-      <h1 class="gallery-title">Art Gallery</h1>
+  <!-- Art Gallery -->
+  <main class="page-content">
+    <section class="gallery">
+      <h1>Docotela X Art Gallery</h1>
+      <p>Explore the artwork that inspires our collections. Each piece reflects the essence of freedom, expression, and exclusivity.</p>
+
       <div class="gallery-grid">
-        <div class="art-piece">
-          <img src="https://via.placeholder.com/400x500" alt="Art 1">
-          <div class="hover-label">Click to View</div>
+        <div class="gallery-item">
+          <img src="images/art1.jpg" alt="Art Piece 1" />
+          <p>Freedom In Motion</p>
         </div>
-        <div class="art-piece">
-          <img src="https://via.placeholder.com/400x500" alt="Art 2">
-          <div class="hover-label">Click to View</div>
+        <div class="gallery-item">
+          <img src="images/art2.jpg" alt="Art Piece 2" />
+          <p>Stillness in Emptiness</p>
         </div>
-        <div class="art-piece">
-          <img src="https://via.placeholder.com/400x500" alt="Art 3">
-          <div class="hover-label">Click to View</div>
+        <div class="gallery-item">
+          <img src="images/art3.jpg" alt="Art Piece 3" />
+          <p>Lost Light</p>
         </div>
+        <div class="gallery-item">
+          <img src="images/art4.jpg" alt="Art Piece 4" />
+          <p>Endless Horizon</p>
+        </div>
+        <!-- Add more as needed -->
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+  <footer class="footer">
+    <p>© 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('menu').classList.toggle('hidden');
+      document.getElementById('mobileMenu').classList.toggle('hidden');
     }
   </script>
 </body>
