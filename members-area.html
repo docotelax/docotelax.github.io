@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exclusive Members Area – Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="main-nav">
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="members.html">Members Only</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- Members-Only Content -->
+  <main class="exclusive-content">
+    <h1>Welcome to the Exclusive Members Area</h1>
+    <p>This section contains content only available to our trusted supporters.</p>
+    <!-- You can add private collection previews, early drops, etc. -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
