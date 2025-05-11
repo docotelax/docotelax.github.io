@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Members Only | Docotela X</title>
+  <meta charset="UTF-8">
+  <title>Members Only – Docotela X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="dark-theme">
+<body>
 
   <!-- Navigation -->
-  <header class="header">
-    <nav class="top-nav">
+  <header>
+    <nav class="main-nav">
       <div class="nav-center">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -18,59 +18,47 @@
       </div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-
-    <div id="mobileMenu" class="mobile-nav hidden">
+    <div class="dropdown-menu" id="dropdownMenu">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
       <a href="gallery.html">Art Gallery</a>
-      <a href="members.html" class="active">Members Only</a>
+      <a href="members.html">Members Only</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
   </header>
 
-  <!-- Members Only -->
-  <main class="page-content">
-    <section class="members-section">
-      <h1>Members Only</h1>
-      <p>This section is exclusive to our private members. Please enter the password to continue.</p>
-
-      <input type="password" id="passwordInput" placeholder="Enter password..." />
-      <button onclick="checkPassword()">Enter</button>
-
-      <div id="accessDenied" class="error-message hidden">Incorrect password. Try again.</div>
-    </section>
-
-    <section id="membersContent" class="hidden">
-      <h2>Welcome to the Inner Circle</h2>
-      <p>This is where we showcase unreleased designs, secret collaborations, and upcoming drops. You made it.</p>
-    </section>
+  <!-- Members Only Login Form -->
+  <main class="members-login">
+    <h1>Members Only Access</h1>
+    <p>Please enter the password to access exclusive content.</p>
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="errorMessage" style="color: red; display: none;">Incorrect password. Try again.</p>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Docotela X. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
+      var menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
     }
 
     function checkPassword() {
-      const password = document.getElementById('passwordInput').value;
-      const allowedPassword = "memberson1y";
-      const errorMsg = document.getElementById('accessDenied');
-      const content = document.getElementById('membersContent');
+      const correctPassword = "memberson1y"; // Your current password
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("errorMessage");
 
-      if (password === allowedPassword) {
-        errorMsg.classList.add('hidden');
-        content.classList.remove('hidden');
+      if (input === correctPassword) {
+        window.location.href = "members-area.html";
       } else {
-        errorMsg.classList.remove('hidden');
-        content.classList.add('hidden');
+        error.style.display = "block";
       }
     }
   </script>
+
 </body>
 </html>
