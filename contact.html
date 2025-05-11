@@ -3,23 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact – DOCOTELA X</title>
+  <title>Contact – Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top Nav & Hamburger Menu -->
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="top-center-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div id="menu" class="dropdown-menu">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="members.html">Members Only</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </header>
 
-  <main>
+  <!-- Contact Section -->
+  <main class="contact-container fade-in">
     <h1>Contact Us</h1>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>Name:<input type="text" name="name" required></label>
-      <label>Email:<input type="email" name="_replyto" required></label>
-      <label>Message:<textarea name="message" required></textarea></label>
-      <button type="submit">Send</button>
+    <p>For inquiries, collaborations, or to learn more about Docotela X, reach out below.</p>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </main>
 
-  <footer>...same footer...</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
-
