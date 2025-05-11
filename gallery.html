@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art Gallery | Docotela X</title>
+  <title>Art Gallery – Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="dark-theme">
+<body>
 
   <!-- Navigation -->
-  <header class="header">
-    <nav class="top-nav">
+  <header>
+    <nav class="main-nav">
       <div class="nav-center">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -18,53 +18,53 @@
       </div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
-
-    <div id="mobileMenu" class="mobile-nav hidden">
+    <div class="dropdown-menu" id="dropdownMenu">
       <a href="index.html">Home</a>
       <a href="collections.html">Collections</a>
-      <a href="gallery.html" class="active">Art Gallery</a>
+      <a href="gallery.html">Art Gallery</a>
       <a href="members.html">Members Only</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
   </header>
 
-  <!-- Art Gallery -->
-  <main class="page-content">
-    <section class="gallery">
-      <h1>Docotela X Art Gallery</h1>
-      <p>Explore the artwork that inspires our collections. Each piece reflects the essence of freedom, expression, and exclusivity.</p>
+  <!-- Art Gallery Section -->
+  <main class="gallery-section">
+    <h1>Art Gallery</h1>
+    <p class="gallery-intro">Explore the handpicked artworks and inspirations behind Docotela X.</p>
 
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/art1.jpg" alt="Art Piece 1" />
-          <p>Freedom In Motion</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art2.jpg" alt="Art Piece 2" />
-          <p>Stillness in Emptiness</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art3.jpg" alt="Art Piece 3" />
-          <p>Lost Light</p>
-        </div>
-        <div class="gallery-item">
-          <img src="images/art4.jpg" alt="Art Piece 4" />
-          <p>Endless Horizon</p>
-        </div>
-        <!-- Add more as needed -->
+    <div class="gallery-grid">
+      <!-- Replace these src values with your actual artwork -->
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x500" alt="Artwork 1">
+        <p class="caption">Freedom I</p>
       </div>
-    </section>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x500" alt="Artwork 2">
+        <p class="caption">Ethereal Flame</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x500" alt="Artwork 3">
+        <p class="caption">Divine Focus</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x500" alt="Artwork 4">
+        <p class="caption">Chaos in Motion</p>
+      </div>
+      <!-- Add more as needed -->
+    </div>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Docotela X. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Docotela X. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
+      var menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
