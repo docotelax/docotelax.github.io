@@ -3,17 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – DOCOTELA X</title>
+  <title>About | Docotela X</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <!-- Top Nav & Hamburger Menu -->
+<body class="dark-theme">
 
-  <main>
-    <h1>About DOCOTELA X</h1>
-    <p>DOCOTELA X is more than fashion – it's art in motion. Built on freedom, craftsmanship, and authenticity.</p>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="top-nav">
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-nav hidden">
+      <a href="index.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="gallery.html">Art Gallery</a>
+      <a href="members.html">Members Only</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <main class="page-content">
+    <section class="about-section">
+      <h1>Our Story</h1>
+      <p>
+        Docotela X is more than a clothing brand — it is the embodiment of freedom, identity, and artistic craftsmanship.
+        Born from a vision of pure self-expression, we believe fashion is not what you wear, but how you *feel*.
+        Each piece tells a story. A journey. A pursuit of greatness.
+      </p>
+
+      <h2>Philosophy</h2>
+      <p>
+        Our collections are not mass-produced — they are experiences.
+        Every stitch, shade, and silhouette is designed with intent, meaning, and the hands of local young artists.
+        Limited in number, infinite in impact. That is Docotela X.
+      </p>
+
+      <h2>What Drives Us</h2>
+      <p>
+        We are driven by the feeling of freedom — the feeling of becoming your truest self.
+        Through fashion and art, we remind the world that success starts with belief and expression.
+      </p>
+    </section>
   </main>
 
-  <footer>...same footer...</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Docotela X. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
