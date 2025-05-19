@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Docotela X – Product 1</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .product-container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    .product-image {
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product-description {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .buy-button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: gold;
+      color: black;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+    <div class="center-links">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <div class="dropdown" id="dropdownMenu">
+    <a href="../index.html">Home</a>
+    <a href="../collections.html">Collections</a>
+    <a href="../members.html">Members Only</a>
+    <a href="../gallery.html">Art Gallery</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </div>
+
+  <div class="product-container">
+    <h2>Exclusive Piece #1 – The Feeling of Freedom</h2>
+    <a href="#lightbox"><img src="../assets/product1.jpg" alt="Product Image" class="product-image" /></a>
+    <p class="product-description">
+      This handcrafted piece is a unique expression of liberation. Designed by one of our featured artists, it carries
+      the raw spirit of Docotela X.
+    </p>
+    <button class="buy-button" onclick="document.getElementById('contactForm').scrollIntoView();">Buy Now</button>
+
+    <div class="gallery">
+      <img src="../assets/product1.jpg" onclick="document.location='#lightbox'" alt="Gallery Image" />
+      <img src="../assets/product1-2.jpg" onclick="document.location='#lightbox'" alt="Gallery Image 2" />
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="window.location='#';">
+    <img src="../assets/product1.jpg" alt="Zoomed Product Image" />
+  </div>
+
+  <!-- Contact Form -->
+  <div class="product-container" id="contactForm">
+    <h3>Contact Us to Purchase</h3>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required /><br/><br/>
+      <input type="email" name="email" placeholder="Your Email" required /><br/><br/>
+      <textarea name="message" placeholder="Message" rows="5" required></textarea><br/><br/>
+      <button type="submit" class="buy-button">Send</button>
+    </form>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
